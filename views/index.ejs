@@ -5,9 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>서울시 맛집</title>
-  <link rel="stylesheet" href="../static/common.css">
-  <link rel="stylesheet" href="../static/index.css">
-  <script src="../static/common.js" defer></script>
+  <link rel="stylesheet" href="static/css/common.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="static/js/common.js"></script>
+
 </head>
 <body>
   <header>
@@ -16,9 +18,9 @@
     </div>
     <nav>
       <ul>
-        <li class="menu-item">서비스 소개</li>
-        <li class="menu-item">FAQ</li>
-        <li class="menu-item">고객센터</li>
+        <li class="menu-item"><a href="">서비스 소개</a></li>
+        <li class="menu-item"><a href="">FAQ</a></li>
+        <li class="menu-item"><a href="">고객센터</a></li>
       </ul>  
     </nav>
     <button id="drawer-btn">
@@ -30,17 +32,19 @@
   <aside id="side-bar">
     <nav>
       <ul>
-        <li class="side-item">서비스 소개</li>
-        <li class="side-item">FAQ</li>
-        <li class="side-item">고객센터</li>
+        <li class="side-item"><a href="">서비스 소개</a></li>
+        <li class="side-item"><a href="">FAQ</a></li>
+        <li class="side-item"><a href="">고객센터</a></li>
       </ul>
     </nav>
   </aside>
+
+  
   <main>
     <div class="inner">
-      <img src="/static/seoul.png" usemap="#image-map">
+      <img src="static/img/seoul.png" usemap="#image-map">
 
-      <map name="image-map">
+      <map name="image-map" id="image-map">
         <area target="" alt="강서구" title="강서구" href="/강서구" coords="60,228,54,240,57,249,48,270,26,291,11,321,42,332,50,352,65,338,82,346,105,335,121,365,151,364,154,323,173,331,176,323,66,223,62,226" shape="poly">
         <area target="" alt="구로구" title="구로구" href="/구로구" coords="95,406,88,418,78,423,88,441,83,465,122,470,162,430,171,447,181,441,203,457,209,448,180,388,167,410,148,402,116,415" shape="poly">
         <area target="" alt="금천구" title="금천구" href="/금천구" coords="170,452,188,491,188,502,201,511,219,544,249,514,219,477,219,457,193,459,179,443" shape="poly">
@@ -68,6 +72,8 @@
         <area target="" alt="중구" title="중구" href="/중구" coords="310,297,357,297,390,291,393,300,369,331,306,322,304,312,315,303" shape="poly">
       </map>
     </div>
+  
+    <div class="review"></div>
   </main>
 </body>
 </html>
