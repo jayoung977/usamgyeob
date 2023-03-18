@@ -1,73 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>서울시 맛집</title>
-  <link rel="stylesheet" href="../static/common.css">
-  <link rel="stylesheet" href="../static/index.css">
-  <script src="../static/common.js" defer></script>
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <a href="/">우삼겹</a>
-    </div>
-    <nav>
-      <ul>
-        <li class="menu-item">서비스 소개</li>
-        <li class="menu-item">FAQ</li>
-        <li class="menu-item">고객센터</li>
-      </ul>  
-    </nav>
-    <button id="drawer-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </header>
-  <aside id="side-bar">
-    <nav>
-      <ul>
-        <li class="side-item">서비스 소개</li>
-        <li class="side-item">FAQ</li>
-        <li class="side-item">고객센터</li>
-      </ul>
-    </nav>
-  </aside>
-  <main>
-    <div class="inner">
-      <img src="/static/seoul.png" usemap="#image-map">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>서울시 맛집</title>
+    <link rel="stylesheet" href="../static/common.css" />
+    <link rel="stylesheet" href="../static/index.css" />
+    <script src="../static/common.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="/">우삼겹</a>
+      </div>
+      <nav>
+        <ul>
+          <li class="menu-item">서비스 소개</li>
+          <li class="menu-item">FAQ</li>
+          <li class="menu-item">고객센터</li>
+        </ul>
+      </nav>
+      <button id="drawer-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+    <aside id="side-bar">
+      <nav>
+        <ul>
+          <li class="side-item">서비스 소개</li>
+          <li class="side-item">FAQ</li>
+          <li class="side-item">고객센터</li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <div class="inner">
+        <img src="/static/seoul.png" usemap="#image-map" />
 
-      <map name="image-map">
-        <area target="" alt="강서구" title="강서구" href="/강서구" coords="60,228,54,240,57,249,48,270,26,291,11,321,42,332,50,352,65,338,82,346,105,335,121,365,151,364,154,323,173,331,176,323,66,223,62,226" shape="poly">
-        <area target="" alt="구로구" title="구로구" href="/구로구" coords="95,406,88,418,78,423,88,441,83,465,122,470,162,430,171,447,181,441,203,457,209,448,180,388,167,410,148,402,116,415" shape="poly">
-        <area target="" alt="금천구" title="금천구" href="/금천구" coords="170,452,188,491,188,502,201,511,219,544,249,514,219,477,219,457,193,459,179,443" shape="poly">
-        <area target="" alt="관악구" title="관악구" href="/관악구" coords="212,445,249,433,299,436,307,463,328,466,339,498,302,531,265,537,253,514,221,471" shape="poly">
-        <area target="" alt="영등포구" title="영등포구" href="/영등포구" coords="177,322,176,331,192,362,177,372,195,405,208,442,235,426,250,392,236,354" shape="poly">
-        <area target="" alt="동작구" title="동작구" href="/동작구" coords="253,395,278,392,328,415,329,462,306,464,302,434,250,429,222,435,240,423" shape="poly">
-        <area target="" alt="서초구" title="서초구" href="/서초구" coords="378,379,385,379,406,452,422,453,435,480,482,469,500,506,461,552,412,535,399,487,385,509,343,497,330,416" shape="poly">
-        <area target="" alt="강남구" title="강남구" href="/강남구" coords="383,377,403,362,459,386,461,414,511,438,542,484,505,502,484,467,435,475,425,448,408,448" shape="poly">
-        <area target="" alt="양천구" title="양천구" href="/양천구" coords="96,340,88,349,93,400,117,412,135,403,158,394,165,403,175,383,173,368,185,360,173,335,158,329,156,364,119,371,105,340" shape="poly">
-        <area target="" alt="송파구" title="송파구" href="/송파구" coords="528,350,540,351,536,370,572,395,597,421,581,466,544,482,516,441,465,411,461,386,481,384,505,374" shape="poly">
-        <area target="" alt="강동구" title="강동구" href="/강동구" coords="621,275,621,293,630,334,603,339,575,386,540,371,540,350,529,343,547,305" shape="poly">
-        <area target="" alt="노원구" title="노원구" href="/노원구" coords="475,58,499,68,503,147,524,154,517,198,452,202,423,177,431,151,442,159,435,79,444,64" shape="poly">
-        <area target="" alt="도봉구" title="도봉구" href="/도봉구" coords="378,44,431,60,439,153,428,146,422,176,382,138,387,100,369,78" shape="poly">
-        <area target="" alt="강북구" title="강북구" href="/강북구" coords="366,78,348,87,351,106,328,132,335,164,372,188,376,205,410,212,430,188,378,138,384,102" shape="poly">
-        <area target="" alt="중랑구" title="중랑구" href="/중랑구" coords="464,204,463,218,469,234,464,241,476,289,512,284,533,247,533,199" shape="poly">
-        <area target="" alt="성북구" title="성북구" href="/성북구" coords="332,167,320,173,333,186,339,217,327,240,361,250,373,271,393,275,462,220,460,206,446,203,432,193,411,214,376,209,369,190" shape="poly">
-        <area target="" alt="종로구" title="종로구" href="/종로구" coords="319,175,299,178,284,187,284,218,297,244,290,277,306,295,392,289,393,276,373,272,357,251,325,242,336,215,330,185" shape="poly">
-        <area target="" alt="동대문구" title="동대문구" href="/동대문구" coords="462,222,394,274,396,289,425,288,465,309,472,287,462,244,468,230" shape="poly">
-        <area target="" alt="은평구" title="은평구" href="/은평구" coords="280,126,295,136,300,173,279,188,281,219,244,260,226,259,212,276,187,250,231,152" shape="poly">
-        <area target="" alt="서대문구" title="서대문구" href="/서대문구" coords="281,220,245,260,228,260,215,277,250,297,255,315,299,313,309,303,288,278,295,243" shape="poly">
-        <area target="" alt="마포구" title="마포구" href="/마포구" coords="183,254,142,277,212,333,284,353,305,322,301,313,255,316,247,299,212,279" shape="poly">
-        <area target="" alt="용산구" title="용산구" href="/용산구" coords="306,323,287,355,293,386,326,400,382,352,362,329" shape="poly">
-        <area target="" alt="광진구" title="광진구" href="/광진구" coords="476,292,443,362,474,373,510,347,522,315,510,289" shape="poly">
-        <area target="" alt="성동구" title="성동구" href="/성동구" coords="393,291,396,302,370,334,383,352,402,345,442,362,462,310,421,288" shape="poly">
-        <area target="" alt="중구" title="중구" href="/중구" coords="310,297,357,297,390,291,393,300,369,331,306,322,304,312,315,303" shape="poly">
-      </map>
-    </div>
-  </main>
-</body>
+        <map name="image-map">
+          <area
+            target=""
+            alt="강서구"
+            title="강서구"
+            href="/강서구"
+            coords="60,228,54,240,57,249,48,270,26,291,11,321,42,332,50,352,65,338,82,346,105,335,121,365,151,364,154,323,173,331,176,323,66,223,62,226"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="구로구"
+            title="구로구"
+            href="/구로구"
+            coords="95,406,88,418,78,423,88,441,83,465,122,470,162,430,171,447,181,441,203,457,209,448,180,388,167,410,148,402,116,415"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="금천구"
+            title="금천구"
+            href="/금천구"
+            coords="170,452,188,491,188,502,201,511,219,544,249,514,219,477,219,457,193,459,179,443"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="관악구"
+            title="관악구"
+            href="/관악구"
+            coords="212,445,249,433,299,436,307,463,328,466,339,498,302,531,265,537,253,514,221,471"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="영등포구"
+            title="영등포구"
+            href="/영등포구"
+            coords="177,322,176,331,192,362,177,372,195,405,208,442,235,426,250,392,236,354"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="동작구"
+            title="동작구"
+            href="/동작구"
+            coords="253,395,278,392,328,415,329,462,306,464,302,434,250,429,222,435,240,423"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="서초구"
+            title="서초구"
+            href="/서초구"
+            coords="378,379,385,379,406,452,422,453,435,480,482,469,500,506,461,552,412,535,399,487,385,509,343,497,330,416"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="강남구"
+            title="강남구"
+            href="/강남구"
+            coords="383,377,403,362,459,386,461,414,511,438,542,484,505,502,484,467,435,475,425,448,408,448"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="양천구"
+            title="양천구"
+            href="/양천구"
+            coords="96,340,88,349,93,400,117,412,135,403,158,394,165,403,175,383,173,368,185,360,173,335,158,329,156,364,119,371,105,340"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="송파구"
+            title="송파구"
+            href="/송파구"
+            coords="528,350,540,351,536,370,572,395,597,421,581,466,544,482,516,441,465,411,461,386,481,384,505,374"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="강동구"
+            title="강동구"
+            href="/강동구"
+            coords="621,275,621,293,630,334,603,339,575,386,540,371,540,350,529,343,547,305"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="노원구"
+            title="노원구"
+            href="/노원구"
+            coords="475,58,499,68,503,147,524,154,517,198,452,202,423,177,431,151,442,159,435,79,444,64"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="도봉구"
+            title="도봉구"
+            href="/도봉구"
+            coords="378,44,431,60,439,153,428,146,422,176,382,138,387,100,369,78"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="강북구"
+            title="강북구"
+            href="/강북구"
+            coords="366,78,348,87,351,106,328,132,335,164,372,188,376,205,410,212,430,188,378,138,384,102"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="중랑구"
+            title="중랑구"
+            href="/중랑구"
+            coords="464,204,463,218,469,234,464,241,476,289,512,284,533,247,533,199"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="성북구"
+            title="성북구"
+            href="/성북구"
+            coords="332,167,320,173,333,186,339,217,327,240,361,250,373,271,393,275,462,220,460,206,446,203,432,193,411,214,376,209,369,190"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="종로구"
+            title="종로구"
+            href="/종로구"
+            coords="319,175,299,178,284,187,284,218,297,244,290,277,306,295,392,289,393,276,373,272,357,251,325,242,336,215,330,185"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="동대문구"
+            title="동대문구"
+            href="/동대문구"
+            coords="462,222,394,274,396,289,425,288,465,309,472,287,462,244,468,230"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="은평구"
+            title="은평구"
+            href="/은평구"
+            coords="280,126,295,136,300,173,279,188,281,219,244,260,226,259,212,276,187,250,231,152"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="서대문구"
+            title="서대문구"
+            href="/서대문구"
+            coords="281,220,245,260,228,260,215,277,250,297,255,315,299,313,309,303,288,278,295,243"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="마포구"
+            title="마포구"
+            href="/마포구"
+            coords="183,254,142,277,212,333,284,353,305,322,301,313,255,316,247,299,212,279"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="용산구"
+            title="용산구"
+            href="/용산구"
+            coords="306,323,287,355,293,386,326,400,382,352,362,329"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="광진구"
+            title="광진구"
+            href="/광진구"
+            coords="476,292,443,362,474,373,510,347,522,315,510,289"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="성동구"
+            title="성동구"
+            href="/성동구"
+            coords="393,291,396,302,370,334,383,352,402,345,442,362,462,310,421,288"
+            shape="poly"
+          />
+          <area
+            target=""
+            alt="중구"
+            title="중구"
+            href="/중구"
+            coords="310,297,357,297,390,291,393,300,369,331,306,322,304,312,315,303"
+            shape="poly"
+          />
+        </map>
+      </div>
+    </main>
+  </body>
 </html>
