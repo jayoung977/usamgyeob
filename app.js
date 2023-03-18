@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/service_info", (req, res) => {
+  res.render("service_info");
+});
+
 app.listen(port, () => {
   console.log(port + "is open!");
   console.log(`http://localhost:${port}`);
