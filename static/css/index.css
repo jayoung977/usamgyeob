@@ -1,9 +1,9 @@
-main {
-}
-
 main .inner {
-  width: 700px;
   height: calc(100vh - 5rem);
+  width: 500px;
   margin: 0 auto;
   background-color: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
