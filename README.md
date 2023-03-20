@@ -1,6 +1,6 @@
 ## :dart: 프로젝트 명
 <p align='center'>
-<img width='40%' src='http://drive.google.com/uc?export=view&id=1ApkouplJZGta7_J9CYw-dOg6eJ7n_J_5'>
+<img width='80%' src='http://drive.google.com/uc?export=view&id=1ApkouplJZGta7_J9CYw-dOg6eJ7n_J_5'>
 </p>
 
 <p align='center'>
