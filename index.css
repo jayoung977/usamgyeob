@@ -3,154 +3,142 @@ main {
 
 main .inner {
   position: relative;
-  width: 1200px;
+  width: 80%;
   height: calc(100vh - 5rem);
   margin: 0px auto;
   background-color: burlywood;
-  display: flex;
 }
 .container {
-  width: 600px;
+  width: 100%;
   height: calc(100vh - 5rem);
   background-color: burlywood;
 }
-#name {
-  border: 1px solid;
-  font-size: 40px;
-  height: 60px;
-  text-align: center;
-  transform: translateY(10px);
+.container1 {
+  height: 500px;
 }
-
-#score {
-  border: 1px solid;
-  text-align: center;
-  margin-top: 9px;
-  font-size: 20px;
-}
-
-.inner > .container *:nth-child(3n) {
-  position: absolute;
-  margin-top: 20px;
-  height: 250px;
-  width: 250px;
-  margin-left: 180px;
-}
-#location {
-  margin-top: 280px;
-  border: 1px solid;
-  left: 25%;
-  text-align: center;
-  font-size: 30px;
-}
-#kindofFood {
-  left: 25%;
-  font-size: 30px;
-  text-align: center;
-  border: 1px solid;
-}
-#recommend {
-  left: 25%;
-  font-size: 30px;
-  text-align: center;
-  border: 1px solid;
-}
-.container2 {
-  display: block;
-  width: 600px;
-}
-
-.container2 *:nth-child(n) {
-  position: absolute;
-  margin-top: 40px;
-  height: 120px;
-  width: 120px;
-  margin-left: auto;
-}
-#메뉴1 {
-  margin-top: 60px;
-  height: 100px;
-  width: 100px;
-  margin-left: 120px;
-}
-#가격1 {
-  margin-left: 120px;
-  margin-top: 80px;
-}
-#메뉴2 {
-  margin-top: 60px;
-  height: 100px;
-  width: 100px;
-  margin-left: 350px;
-}
-#가격2 {
-  margin-left: 352px;
-  margin-top: 80px;
-}
-.container2 *:nth-child(4n) {
-  position: absolute;
-  margin-top: 40px;
-  height: 120px;
-  width: 120px;
-  margin-left: 90%;
-}
-
-.container3 {
-  position: static;
-}
-#review {
-  position: absolute;
-  font-size: 40px;
-  border: 1px solid;
-  width: 599px;
-  height: 60px;
-  text-align: center;
-
-  transform: translateY(10px);
-}
-#후기작성란 {
-  position: absolute;
-  font-size: 20px;
-  width: 599px;
-  text-align: center;
-  margin-top: 70px;
-  border: 1px solid;
-}
-
-.후기작성컨테이너 {
+header {
   display: flex;
 }
-.후기작성컨테이너1 {
-  position: relative;
+.title {
+  display: flex;
+}
+.name {
   border: 1px solid;
-  margin-top: 97.5px;
-  width: auto;
-  justify-content: space-evenly;
+  font-size: 40px;
+  position: absolute;
+  width: 100%;
+  margin: 0px;
+  height: 60px;
+  text-align: center;
 }
 
-.후기작성컨테이너2 {
-  margin-top: 97.5px;
-  border: 1px solid;
-}
-.후기 {
-  text-align: center;
-  font-size: ;
-  border: 1px solid;
-  width: 355px;
-}
-#floatingTextarea {
-  height: 70px;
-  width: 350px;
-}
-#별점 {
+.score {
+  position: absolute;
   border: 1px solid;
   text-align: center;
+  height: 20px;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 40px;
 }
-button {
-  width: 50px;
-  height: 30px;
-  margin-top: 145px;
+.recommend {
+  border: 1px solid;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin-top: 70px;
+  font-size: 30px;
 }
+.kind-of-food {
+  font-size: 25px;
+  text-align: center;
+  border: 1px solid;
+  margin-top: 15px;
+  margin-left: 800px;
+  width: 100px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.img-box {
+  margin-top: 30px;
+  height: 300px;
+}
+.img-box1 {
+  margin-left: 150px;
+}
+.description1 {
+  display: block;
+}
+.foodname {
+  width: 300px;
+  border: 1px solid;
+  font-size: 30px;
+  text-align: center;
+}
+.price1 {
+  margin-top: 0px;
+}
+.description2 {
+  display: block;
+  width: 300px;
+}
+
+.price {
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  background-color: ;
+  width: 300px;
+}
+
+.img-box1 > img {
+  width: 300px;
+  height: 300px;
+  margin-top: 40px;
+  margin-right: 200px;
+}
+
+.img-box2 > img {
+  width: 300px;
+  height: 300px;
+  margin-top: 40px;
+  margin-right: 130px;
+}
+.write {
+  font-size: 40px;
+  border: 1px solid;
+  text-align: center;
+}
+.review-container1 {
+  margin-top: 30px;
+  display: flex;
+  margin-left: 0px;
+  justify-content: center;
+}
+.review {
+  border: 1px solid;
+  font-size: 25px;
+  width: 802px;
+  text-align: center;
+}
+textarea {
+  width: 800px;
+  height: 120px;
+}
+.inner-review2 {
+  border: 1px solid;
+}
+.star {
+  font-size: 25px;
+  text-align: center;
+  border-bottom: 1px solid;
+  width: 300px;
+}
+
 #myform fieldset {
   display: inline-block; /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
   border: 0; /* 필드셋 테두리 제거 */
@@ -174,30 +162,89 @@ button {
 #myform fieldset {
   display: inline-block; /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
   direction: rtl; /* 이모지 순서 반전 */
-  border: 0; /* 필드셋 테두리 제거 */
+  border: 0px; /* 필드셋 테두리 제거 */
   padding: 0px;
 }
-.닉네임 {
-  margin: 10px;
+.btn {
+  height: 65px;
+  width: 65px;
+  margin-top: 45px;
 }
 
-#후기모음 {
+.review-gathering {
+  font-size: 40px;
   text-align: center;
-  font-size: 20px;
-  margin-top: 0px;
   border: 1px solid;
+  margin-top: 30px;
 }
-.후기모음컨테이너1 {
-  border: 1px solid;
+
+.review-container2 {
   display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  height: 40px;
 }
-.후기의견 {
-  margin: 10px;
-}
-.따봉 {
-  margin: 10px;
-}
-.후기모음컨테이너2 {
-  display: flex;
+.nickname {
   border: 1px solid;
+  font-size: 25px;
+
+  margin-left: 30px;
+  width: 200px;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.opinion {
+  font-size: 25px;
+  border: 1px solid;
+  text-align: center;
+  width: 600px;
+}
+.opinion1 {
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  text-align: center;
+  width: 600px;
+  font-size: 25px;
+}
+.opinion-star {
+  text-align: center;
+  width: 200px;
+  font-size: 25px;
+  border: 1px solid;
+  border-bottom: 1px solid;
+}
+#myform2 input[type="radio"] {
+  display: none; /* 라디오박스 감춤 */
+}
+#myform2 label {
+  font-size: 1.5em; /* 이모지 크기 */
+  color: transparent; /* 기존 이모지 컬러 제거 */
+  text-shadow: 0 0 0 #f0f0f0; /* 새 이모지 색상 부여 */
+}
+#myform2 label:hover {
+  text-shadow: 0 0 0 #a00; /* 마우스 호버 */
+}
+#myform2 label:hover ~ label {
+  text-shadow: 0 0 0 #a00; /* 마우스 호버 뒤에오는 이모지들 */
+}
+#myform2 fieldset {
+  display: inline-block; /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
+  direction: rtl; /* 이모지 순서 반전 */
+  border: 0px; /* 필드셋 테두리 제거 */
+  padding: 0px;
+}
+#myform2 {
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+
+.fieldset2 {
+  font-size: 10px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.thumb {
+  font-size: 30px;
 }

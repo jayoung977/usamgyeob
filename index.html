@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>서울시 맛집</title>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="index.css" />
     <script src="common.js" defer></script>
-    <link href="
-    https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
-    " rel="stylesheet">
   </head>
   <body>
     <header>
@@ -41,42 +44,48 @@
     </aside>
     <main>
       <div class="inner">
-        <div class="container">
-          <div id="name">상호이름</div>
-          <div id="score">평균평점</div>
-          <img src="./치킨.jpeg" alt="후라이드" />
-          <div id="location">주소이름</div>
-          <div id="kindofFood">음식종류</div>
-          <div class="container2">
-            <img src="./치킨.jpeg" alt="후라이드" />
-            <div id="메뉴1">후라이드치킨</div>
-            <div id="가격1">19000원</div>
-            <img src="./양념치킨.jpeg" alt="양념" />
-            <div id="메뉴2">양념치킨</div>
-            <div id="가격2">20000원</div>
-          </div>
-          <div id="recommend">추천메뉴</div>
-        </div>
-        <div class="container3">
-          <div id="review">리뷰란</div>
-          <div id="후기작성란">후기작성란</div>
-          <div class="후기작성컨테이너">
-            <div class="후기작성컨테이너1">
-              <div class="comment"></div>
-              <div class="후기">후기</div>
-              <div class="form-floating">
-                <textarea
-                  class="form-control"
-                  placeholder="Leave a comment here"
-                  id="floatingTextarea"
-                ></textarea>
+        <div class="container container1">
+          <header2>
+            <div class="title">
+              <div class="name">상호</div>
+              <div class="score">평점</div>
+              <div class="recommend">추천메뉴</div>
+            </div>
+            <div class="kind-of-food">종류</div>
+          </header2>
+          <div class="img-container">
+            <div class="img-box img-box1">
+              <img src="usamgyeob/static/img/양념치킨.jpeg" alt="양념치킨" />
+              <div class="description description1">
+                <div class="foodname name1">양념치킨</div>
+                <div clagss="price price1">20000원</div>
               </div>
             </div>
-            <div class="후기작성컨테이너2">
-              <div class="별점">
+            <div class="img-box img-box2">
+              <img src="usamgyeob/static/img/치킨.jpeg" alt="후라이드치킨" />
+              <div class="description description2">
+                <div class="foodname name2">후라이드치킨</div>
+                <div class="price price2">19000원</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container container2">
+          <div class="write">리뷰 작성란</div>
+          <div class="review-container review-container1">
+            <div class="inner-review inner-review1">
+              <div class="review">후기작성</div>
+              <textarea
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="floatingTextarea"
+              ></textarea>
+            </div>
+            <div class="inner-review inner-review2">
+              <div class="starContainer">
                 <form name="myform" id="myform" method="post" action="./save">
                   <fieldset>
-                    <div id="별점">별점</div>
+                    <div class="star">별점</div>
                     <label for="rate1">⭐</label
                     ><input type="radio" name="rating" value="1" id="rate1" />
                     <label for="rate2">⭐</label
@@ -91,15 +100,22 @@
                 </form>
               </div>
             </div>
-            <button type="button" class="btn btn-primary btn-sm">제출</button>
+            <div class="inner-review inner-review3">
+              <button type="button" class="btn btn-primary btn-sm">제출</button>
+            </div>
           </div>
-          <div class="후기모음컨테이너">
-            <div id="후기모음">후기모음</div>
-            <div class="후기모음컨테이너1">  
-            <div class="닉네임 닉네임1">닉네임1</div>
-            <div class="별점1">
-              <form name="myform" id="myform" method="post" action="./save">
+          <div class="review-gathering">리뷰모음</div>
+          <div class="review-container review-container2">
+            <div class="nickname">닉네임</div>
+            <div class="opinionbox">
+              <div class="opinion">리뷰</div>
+              <div class="opinion1">바삭바삭하고 맛있었습니다~!</div>
+            </div>
+            <div class="starbox">
+              <div class="opinion-star">별점</div>
+              <form name="myform2" id="myform2" method="post2" action="./save">
                 <fieldset2>
+                  <div class="star2"></div>
                   <label for="rate1">⭐</label
                   ><input type="radio" name="rating" value="1" id="rate1" />
                   <label for="rate2">⭐</label
@@ -110,36 +126,12 @@
                   ><input type="radio" name="rating" value="4" id="rate4" />
                   <label for="rate5">⭐</label
                   ><input type="radio" name="rating" value="5" id="rate5" />
-                  <div className='article'>
                 </fieldset2>
               </form>
-            </div> </div>
-              <div class="후기의견 의견1">맛있었습니다~~~~!!!</div>
-              <div class="따봉 따봉1">👍</div>
-              
-          </div><div class="후기모음컨테이너2">  
-                <div class="닉네임 닉네임2">닉네임2</div>
-                <div class="별점2">
-                  <form name="myform" id="myform" method="post" action="./save">
-                    <fieldset2>
-                      <label for="rate1">⭐</label
-                      ><input type="radio" name="rating" value="1" id="rate1" />
-                      <label for="rate2">⭐</label
-                      ><input type="radio" name="rating" value="2" id="rate2" />
-                      <label for="rate3">⭐</label
-                      ><input type="radio" name="rating" value="3" id="rate3" />
-                      <label for="rate4">⭐</label
-                      ><input type="radio" name="rating" value="4" id="rate4" />
-                      <label for="rate5">⭐</label
-                      ><input type="radio" name="rating" value="5" id="rate5" />
-                      <div className='article'>
-                    </fieldset2>
-                  </form>
-                 
-                </div> </div>
-                  <div class="후기의견 의견2">꿀맛~~</div>
-                  <div class="따봉 따봉2">👍</div>
-            
+            </div>
+
+            <div class="thumb thumb1">👍</div>
+          </div>
         </div>
       </div>
     </main>
