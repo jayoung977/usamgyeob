@@ -1,4 +1,4 @@
-## :dart: 우삼겹: *우* 리동네 맛집 *삼겹*줄
+## :dart: 우삼겹: **우**리동네 맛집 **삼겹**줄
 <p align='center'>
 <img width='80%' src='http://drive.google.com/uc?export=view&id=1ApkouplJZGta7_J9CYw-dOg6eJ7n_J_5'>
 </p>
