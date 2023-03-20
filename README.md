@@ -1,4 +1,4 @@
-## :dart: 프로젝트 명
+## :dart: 우삼겹: <b>우</b>리동네 맛집 <b>삼겹</b>줄
 <p align='center'>
 <img width='80%' src='http://drive.google.com/uc?export=view&id=1ApkouplJZGta7_J9CYw-dOg6eJ7n_J_5'>
 </p>
