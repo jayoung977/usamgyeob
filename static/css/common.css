@@ -5,7 +5,7 @@ body {
   font-size: 1rem;
 
   /* 페이지 아래 공백 스크롤 제거 */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 a {
@@ -31,7 +31,7 @@ header {
 
 header .logo {
   margin-left: 2rem;
-  background-color:darkcyan;
+  background-color: darkcyan;
 }
 
 header .logo a {
@@ -50,8 +50,8 @@ header ul {
   align-items: center;
 }
 header .menu-item {
-  margin: .5rem;
-  padding: .5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
   background-color: royalblue;
@@ -107,7 +107,7 @@ header #drawer-btn span {
   header nav {
     display: block;
   }
-  
+
   header #drawer-btn {
     display: none;
   }
@@ -115,4 +115,9 @@ header #drawer-btn span {
   #side-bar.open {
     display: none;
   }
+}
+
+.inner {
+  margin: 0 auto;
+  width: 80%;
 }
