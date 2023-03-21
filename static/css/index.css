@@ -1,10 +1,10 @@
-main .inner {
-  height: calc(100vh - 5rem);
-  width: 500px;
-  margin: 0 auto;
-  padding: 0;
-  background-color: cornflowerblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+main .inner #image-map {
+
 }
+
+main .inner #image-map area {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+

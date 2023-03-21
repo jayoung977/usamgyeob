@@ -20,13 +20,26 @@ ol {
   padding: 0;
 }
 
+.btn {
+  display: block;
+  width: 10rem;
+  height: 4rem;
+  background-color: gold;
+  color: black;
+  font-weight: 900;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   width: 100%;
   height: 5rem;
-  background-color: orange;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: orange;
 }
 
 header .logo {
@@ -101,6 +114,17 @@ header #drawer-btn span {
   margin: 2rem;
   padding: 1rem;
   font-size: 2rem;
+}
+
+main .inner {
+  height: calc(100vh - 5rem);
+  width: 80vw;
+  margin: 0 auto;
+  padding: 0;
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 60rem) {
