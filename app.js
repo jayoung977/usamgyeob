@@ -32,6 +32,7 @@ app.get("/customer_service/suggestion", (req, res) => {
 app.get("/customer_service/inquiry", (req, res) => {
   res.render("inquiry");
 });
+
 app.get("/yongsan", (req, res) => {
   res.render("yongsan");
 });
