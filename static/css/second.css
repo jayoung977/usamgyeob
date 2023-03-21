@@ -40,6 +40,8 @@ img {
   text-align: center;
   transition: all 0.5s ease;
   z-index: 4;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 .swiper-slide:hover {
@@ -51,7 +53,10 @@ img {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: rgba(168, 168, 168, 0.42);
+  color: black;
+  scale: 0.5;
+  position: absolute;
+  top: 60%;
 }
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
