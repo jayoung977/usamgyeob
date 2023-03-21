@@ -33,6 +33,10 @@ app.get('/customer_service/inquiry', (req, res) => {
   res.render('inquiry');
 });
 
+app.get("/third", (req, res) => {
+  res.render("third");
+});
+
 app.listen(port, () => {
   console.log(port + 'is open!');
   console.log(`http://localhost:${port}`);
