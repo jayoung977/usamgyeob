@@ -12,6 +12,22 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/service_info", (req, res) => {
+  res.render("service_info");
+});
+app.get("/faq", (req, res) => {
+  res.render("faq");
+});
+app.get("/customer_service", (req, res) => {
+  res.render("customer_service");
+});
+app.get("/customer_service/suggestion", (req, res) => {
+  res.render("suggestion");
+});
+app.get("/customer_service/inquiry", (req, res) => {
+  res.render("inquiry");
+});
+
 app.listen(port, () => {
   console.log(port + "is open!");
   console.log(`http://localhost:${port}`);
