@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 60%;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+h1 {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+ul.maze {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(15, 1rem);
+  grid-template-columns: repeat(15, 1rem);
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+ul.maze li {
+  width: 1rem;
+  height: 1rem;
+  font-weight: bold;
+  background-color: royalblue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .3);
+
+  display: none;
+}
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aliceblue;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  display: none;
+}
+
+#modal a {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.container {
+
+}

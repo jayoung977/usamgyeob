@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: pink; */
+  align-items: center;
+}
+header .brand-logo {
+  /* background-color: white; */
+  margin-left: 20px;
+}
+header .brand-logo:hover {
+  cursor: pointer;
+}
+header .brand-logo .brand-name a {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+header .brand-logo .brand-script a {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+header .brand-logo .brand-script a b {
+  color: #FE5B05;
+}
+header .page-name {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header nav {
+  width: 220px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 20px;
+}
+header > nav > ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  column-gap: 5px;
+}
+main {
+  width: 80%;
+  height: 100vh;
+  height: calc(100vh - 5rem);
+  /* background-color: aqua; */
+  margin: 0 auto;
+}

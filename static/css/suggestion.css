@@ -1,0 +1,69 @@
+.table-container {
+  width: 100%;
+  padding: 100px auto;
+}
+
+.table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.table thead {
+  text-align: left;
+}
+.table th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+
+tbody > tr:hover {
+  background-color: rgb(236, 236, 236);
+  cursor: pointer;
+}
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.btn {
+  width: 60px;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  background-color: #6c757d;
+  font-size: 16px;
+  padding: 6px 12px;
+  margin-right: 15px;
+  position: relative;
+  top: -5px;
+}
+
+.pagination {
+  display: inline-block;
+  /* padding-left: 80px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5%;
+}
+
+.pagination a.active {
+  background-color: rgb(78, 121, 246);
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: silver;
+}
