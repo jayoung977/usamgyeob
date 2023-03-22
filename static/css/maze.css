@@ -15,7 +15,7 @@ h1 {
   text-align: center;
 }
 
-ul {
+ul.maze {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -27,7 +27,7 @@ ul {
   gap: .5rem;
 }
 
-li {
+ul.maze li {
   width: 2rem;
   height: 2rem;
   font-weight: bold;
