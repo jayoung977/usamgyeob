@@ -107,11 +107,11 @@ function generateRandomMaze() {
         continue;
       }
       if (Math.random() < 0.5) {
-        maze[y][x+1] = 1;
+        maze[y][x + 1] = 1;
         count++;
       } else {
         let random = Math.floor(Math.random() * (count + 1)); // 0 ~ counter
-        maze[y + 1][x-2*random] = 1;
+        maze[y + 1][x - (2 * random)] = 1;
         count = 0;
       }
     }
