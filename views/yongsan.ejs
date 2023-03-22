@@ -9,129 +9,172 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="/static/css/common.css">
-    <link rel="stylesheet" href="/static/css/second.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="/static/css/common.css" />
+    <link rel="stylesheet" href="/static/css/second.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script defer src="/static/js/second.js"></script>
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href="/">우삼겹</a>
+      <div class="brand-logo">
+        <div class="brand-name">
+          <a href="/">우삼겹</a>
+        </div>
+        <div class="brand-script">
+          <a href="/"> <b>우</b>리동네 맛집 <b>삼겹</b>줄 </a>
+        </div>
       </div>
+      <div class="page-name">Yongsan</div>
       <nav>
         <ul>
-          <li class="menu-item">서비스 소개</li>
-          <li class="menu-item">FAQ</li>
-          <li class="menu-item">고객센터</li>
+          <li class="menu-item">
+            <a href="/service_info">서비스 소개</a>
+          </li>
+          <li class="menu-item">
+            <a href="/faq">FAQ</a>
+          </li>
+          <li class="menu-item">
+            <a href="/customer_service">고객센터</a>
+          </li>
         </ul>
       </nav>
-      <button id="drawer-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </header>
-    <aside id="side-bar">
-      <nav>
-        <ul>
-          <li class="side-item">서비스 소개</li>
-          <li class="side-item">FAQ</li>
-          <li class="side-item">고객센터</li>
-        </ul>
-      </nav>
-    </aside>
 
     <main>
-
       <div class="dropdown">
-        <button class="dropbtn"> 
+        <button class="dropbtn">
           <span class="dropbtn_icon"></span>
           바로가기
         </button>
         <div class="dropdown-content">
-          <a href="#">강남구</a>
-          <a href="#">강동구</a>
-          <a href="#">강북구</a>
-          <a href="#">강서구</a>
-          <a href="#">관악구</a>
-          <a href="#">광진구</a>
-          <a href="#">구로구</a>
-          <a href="#">금천구</a>
-          <a href="#">노원구</a>
-          <a href="#">도봉구</a>
-          <a href="#">동대문구</a>
-          <a href="#">동작구</a>
-          <a href="#">마포구</a>
-          <a href="#">서대문구</a>
-          <a href="#">서초구</a>
-          <a href="#">성북구</a>
-          <a href="#">송파구</a>
-          <a href="#">양천구</a>
-          <a href="#">영등포구</a>
-          <a href="#">용산구</a>
-          <a href="#">은평구</a>
-          <a href="#">종로구</a>
-          <a href="#">중구</a>
-          <a href="#">중랑구</a>
+          <a href="/maze">강남구</a>
+          <a href="/maze">강동구</a>
+          <a href="/maze">강북구</a>
+          <a href="/maze">강서구</a>
+          <a href="/maze">관악구</a>
+          <a href="/maze">광진구</a>
+          <a href="/maze">구로구</a>
+          <a href="/maze">금천구</a>
+          <a href="/maze">노원구</a>
+          <a href="/maze">도봉구</a>
+          <a href="/maze">동대문구</a>
+          <a href="/maze">동작구</a>
+          <a href="/maze">마포구</a>
+          <a href="/maze">서대문구</a>
+          <a href="/maze">서초구</a>
+          <a href="/maze">성북구</a>
+          <a href="/maze">송파구</a>
+          <a href="/maze">양천구</a>
+          <a href="/maze">영등포구</a>
+          <a href="/yongsan">용산구</a>
+          <a href="/maze">은평구</a>
+          <a href="/maze">종로구</a>
+          <a href="/maze">중구</a>
+          <a href="/maze">중랑구</a>
         </div>
       </div>
 
       <div class="inner">
         <div class="container">
-          <div class="swiper">한식
+          <div class="swiper">
+            <h3>한식</h3>
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="/static/img/chinese1.jpg" alt=""></a></div>
-              <div class="swiper-slide"><img src="static/img/chinese2.jpg" alt=""></div>
-              <div class="swiper-slide">slide 3</div>
+              <div class="swiper-slide">
+                <!-- <a href="/korean/1" -->
+                <a href="/korean/1"
+                  ><img src="/static/img/mugyo.jpg" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/korean/2"
+                  ><img src="/static/img/nanpo.jpg" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/korean/3"
+                  ><img src="/static/img/gongi.jpg" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/korean/4"
+                  ><img src="/static/img/ys24.jpg" alt=""
+                /></a>
+              </div>
+              <!-- <div class="swiper-slide"><a href="http://"><img src="/static/img/ys24_1.jpg" alt=""></a></div> -->
+              <!-- <div class="swiper-slide"><img src="/static/img/ys24_1.jpg" alt=""></div> -->
             </div>
-            <!-- pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- 화살표 -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-        </div>
-        
-        
-        <div class="container">
-          <div class="swiper">중식
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">slide 1</div>
-              <div class="swiper-slide">slide 2</div>
-              <div class="swiper-slide">slide 3</div>
-              <div class="swiper-slide">slide 4</div>
-              <div class="swiper-slide">slide 5</div>
-              <div class="swiper-slide">slide 6</div>
-              <div class="swiper-slide">slide 7</div>
-              <div class="swiper-slide">slide 8</div>
-              <div class="swiper-slide">slide 9</div>
-            </div>
-            <!-- pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- 화살표 -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
 
-            
+            <!-- 화살표 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
-      
+
         <div class="container">
-          <div class="swiper">양식
+          <div class="swiper swiper1">
+            <h3>중식</h3>
             <div class="swiper-wrapper">
-              <div class="swiper-slide">slide 1</div>
-              <div class="swiper-slide">slide 2</div>
-              <div class="swiper-slide">slide 3</div>
-              <div class="swiper-slide">slide 4</div>
-              <div class="swiper-slide">slide 5</div>
-              <div class="swiper-slide">slide 6</div>
-              <div class="swiper-slide">slide 7</div>
-              <div class="swiper-slide">slide 8</div>
-              <div class="swiper-slide">slide 9</div>
+              <div class="swiper-slide">
+                <a href="/chinese/1"
+                  ><img src="/static/img/maggie.jpg" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/chinese/2"><img src="static/img/ya.jpg" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/chinese/3"
+                  ><img src="static/img/yang.jpg" alt=""
+                /></a>
+              </div>
+              <!-- <div class="swiper-slide">
+                <a href="/chinese-4"
+                  ><img src="static/img/homelnad.jpg" alt=""
+                /></a>
+              </div> -->
+              <div class="swiper-slide">
+                <a href="/chinese/4"
+                  ><img src="static/img/homeland1.jpg" alt=""
+                /></a>
+              </div>
             </div>
-            <!-- pagination -->
-            <div class="swiper-pagination"></div>
+            <!-- 화살표 -->
+            <div class="swiper-button-prev swiper-btn"></div>
+            <div class="swiper-button-next swiper-btn"></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="swiper">
+            <h3>양식</h3>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="/western/1"
+                  ><img src="static/img/dirtysnack.jpg" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/western/2"
+                  ><img src="static/img/pimfy.jpg" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/western/3"
+                  ><img src="static/img/natural.jpg" alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/western/4"
+                  ><img src="static/img/tacostand.jpg" alt=""
+                /></a>
+              </div>
+              <!-- <div class="swiper-slide"><a href=""><img src="static/img/tacostand2.jpg" alt=""></a></div> -->
+            </div>
+
             <!-- 화살표 -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>

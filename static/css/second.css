@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  overflow: scroll;
+}
+
+.container {
+  margin: 50px auto;
+  width: 90%;
+  align-items: center;
+  display: flex;
+}
+
+h3 {
+  margin: 15px 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper1 {
+  position: relative;
+}
+.swiper-wrapper {
+  height: 200px;
+}
+.swiper-slide {
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  transition: all 0.5s ease;
+  z-index: 4;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.swiper-slide:hover {
+  position: relative;
+
+  transform: scale(1.2);
+  z-index: 11;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: black;
+  scale: 0.5;
+  position: absolute;
+  top: 60%;
+}
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.dropdown {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+}
+
+.dropbtn_icon {
+  font-family: 'Material Icons';
+}
+
+.dropbtn {
+  border: 1px solid #f5f5f5;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  font-weight: 400;
+  color: rgb(37, 37, 37);
+  padding: 12px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 10; /*다른 요소들보다 앞에 배치*/
+  font-weight: 400;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  overflow: scroll;
+  height: 300px;
+}
+
+.dropdown-content a {
+  display: block;
+  text-decoration: none;
+  color: rgb(37, 37, 37);
+  font-size: 12px;
+  padding: 12px 20px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ececec;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
