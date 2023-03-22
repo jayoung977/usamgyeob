@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+main > h2 {
+  text-align: center;
+  /* margin-top: 20px; */
+}
+#Accordion_wrap {
+  /* margin-top: 5%; */
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+}
+/* .que:first-child {
+  border-top: 1px solid black;
+} */
+
+.que {
+  position: relative;
+  padding: 17px 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+.que::before {
+  padding-left: 10px;
+  display: inline-block;
+  content: "Q";
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #7398c1;
+  margin: 0 5px;
+}
+.que.on {
+  /* font-weight: bold; */
+  /* color: #006633; */
+  background-color: rgb(233, 241, 254);
+}
+.que.on > span {
+  font-weight: bold;
+  /* color: #006633; */
+  /* background-color: rgb(233, 241, 254); */
+}
+
+.anw {
+  display: none;
+  overflow: hidden;
+  font-size: 1rem;
+  /* background-color: #f4f4f2; */
+  padding: 27px 0;
+  padding-left: 30px;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* .anw::before {
+  padding-left: 10px;
+  display: inline-block;
+  content: "A";
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+  margin: 0 5px;
+} */
+
+.arrow-wrap {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+}
+
+.que .arrow-top {
+  display: none;
+}
+.que .arrow-bottom {
+  display: block;
+}
+.que.on .arrow-bottom {
+  display: none;
+}
+.que.on .arrow-top {
+  display: block;
+}
