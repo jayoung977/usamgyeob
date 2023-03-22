@@ -1,61 +1,66 @@
-/* main .inner {
+main .inner {
   position: relative;
   width: 80%;
   height: calc(100vh - 5rem);
   margin: 0px auto;
-  background-color: burlywood;
-} */
+}
 .container {
   width: 100%;
   height: calc(100vh - 5rem);
-  background-color: burlywood;
 }
 .container1 {
   height: 500px;
+  margin-top: 3%;
 }
 header {
   display: flex;
 }
+
 .title {
   display: flex;
-  position: relative;
 }
 .name {
   font-size: 40px;
   position: absolute;
-  width: 90%;
+  width: 100%;
   margin: 0px;
   height: 60px;
   text-align: center;
+  line-height: 60px;
+  background-color: aliceblue;
+  z-index: -1;
 }
 .score {
   position: absolute;
-  border: 1px solid;
   text-align: center;
   height: 20px;
   width: 100%;
   font-size: 20px;
-  margin-top: 40px;
+  margin-top: 6%;
+  color: yellow;
+  font-weight: bold;
 }
 .recommend {
-  border: 1px solid;
   position: absolute;
   text-align: center;
   width: 100%;
-  margin-top: 70px;
+  margin-top: 14%;
   font-size: 30px;
+  background-color: aliceblue;
 }
 .kind-of-food {
   font-size: 25px;
   text-align: center;
-  border: 1px solid;
-  margin-top: 15px;
+  margin-top: 4px;
   margin-left: 70%;
   width: 100px;
+  line-height: 65px;
+  z-index: 1;
 }
 .img-container {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 8%;
 }
 .img-box {
   margin-top: 30px;
@@ -69,7 +74,6 @@ header {
 }
 .foodname {
   width: 300px;
-  border: 1px solid;
   font-size: 30px;
   text-align: center;
 }
@@ -99,10 +103,31 @@ header {
   margin-top: 40px;
   margin-right: 130px;
 }
+.location {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 12%;
+  background-color: aliceblue;
+}
+.detail-location {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 2%;
+}
+iframe {
+  margin-top: 2%;
+  width: 350px;
+  height: 350px;
+  margin-left: 35%;
+}
+.container2 {
+  margin-top: 55%;
+}
 .write {
   font-size: 40px;
-  border: 1px solid;
   text-align: center;
+  margin-top: 25%;
+  background-color: aliceblue;
 }
 .review-container1 {
   margin-top: 30px;
@@ -111,7 +136,6 @@ header {
   justify-content: center;
 }
 .review {
-  border: 1px solid;
   font-size: 25px;
   width: 802px;
   text-align: center;
@@ -120,13 +144,10 @@ textarea {
   width: 800px;
   height: 120px;
 }
-.inner-review2 {
-  border: 1px solid;
-}
+
 .star {
   font-size: 25px;
   text-align: center;
-  border-bottom: 1px solid;
   width: 300px;
 }
 #myform fieldset {
@@ -142,6 +163,7 @@ textarea {
   font-size: 1.5em; /* 이모지 크기 */
   color: transparent; /* 기존 이모지 컬러 제거 */
   text-shadow: 0 0 0 #f0f0f0; /* 새 이모지 색상 부여 */
+  line-height: 100px;
 }
 #myform label:hover {
   text-shadow: 0 0 0 #a00; /* 마우스 호버 */
@@ -163,8 +185,8 @@ textarea {
 .review-gathering {
   font-size: 40px;
   text-align: center;
-  border: 1px solid;
-  margin-top: 30px;
+  margin-top: 6%;
+  background-color: aliceblue;
 }
 .review-container2 {
   display: flex;
@@ -173,7 +195,6 @@ textarea {
   height: 40px;
 }
 .nickname {
-  border: 1px solid;
   font-size: 25px;
   margin-left: 30px;
   width: 200px;
@@ -184,13 +205,11 @@ textarea {
 }
 .opinion {
   font-size: 25px;
-  border: 1px solid;
+
   text-align: center;
   width: 600px;
 }
 .opinion1 {
-  border-bottom: 1px solid;
-  border-right: 1px solid;
   text-align: center;
   width: 600px;
   font-size: 25px;
@@ -199,8 +218,6 @@ textarea {
   text-align: center;
   width: 200px;
   font-size: 25px;
-  border: 1px solid;
-  border-bottom: 1px solid;
 }
 #myform2 input[type="radio"] {
   display: none; /* 라디오박스 감춤 */
@@ -223,8 +240,6 @@ textarea {
   padding: 0px;
 }
 #myform2 {
-  border-bottom: 1px solid;
-  border-right: 1px solid;
 }
 .fieldset2 {
   font-size: 10px;
