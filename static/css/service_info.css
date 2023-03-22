@@ -12,11 +12,11 @@ aside h2 {
   color: white;
 }
 
-aside h2 b {
+#video-head h2 b {
   color: #ffc701;
   text-shadow: -1px 0 #4f495a, 0 1px #4f495a, 1px 0 #4f495a, 0 -1px #4f495a;
 }
-aside video {
+#video-head video {
   top: 200px;
   width: 100%;
   height: 100%;
