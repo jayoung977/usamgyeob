@@ -1,0 +1,15 @@
+main .inner {
+  text-align: center;
+}
+
+main .inner h1 {
+  color:red;
+}
+
+main .inner h2 {
+  color: pink;
+}
+
+main .inner a {
+  margin: auto;
+}
