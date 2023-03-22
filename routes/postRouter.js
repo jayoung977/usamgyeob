@@ -15,10 +15,10 @@ router.post("/korean/:id", function(req, res) {
   const jsonData = fs.readFileSync(koreanPath);
   const fileData = JSON.parse(jsonData);
   fileData.push(req.body);
+  
   // 파일 쓰기
   fs.writeFileSync(koreanPath, JSON.stringify(fileData));
 
-  
   res.redirect(`/korean/${id}`);
 })
 router.post("/chinese/:id", function(req, res) {
