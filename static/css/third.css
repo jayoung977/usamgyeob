@@ -114,21 +114,28 @@ header {
   text-align: center;
   margin-top: 2%;
 }
+
+.location-box {
+  display: flex;
+}
+
 iframe {
-  margin-top: 2%;
-  width: 350px;
-  height: 350px;
-  margin-left: 35%;
+  /* margin-top: 2%; */
+  margin: 0 auto;
+  width: 250px;
+  height: 150px;
+  /* margin-left: 35%; */
 }
 .container2 {
-  margin-top: 55%;
+  /* margin-top: 55%; */
 }
 .write {
   font-size: 40px;
   text-align: center;
-  margin-top: 25%;
+  /* margin-top: 25%; */
   background-color: aliceblue;
 }
+
 .review-container1 {
   margin-top: 30px;
   display: flex;
@@ -156,7 +163,7 @@ textarea {
   margin: 0;
   text-align: center;
 }
-#myform input[type="radio"] {
+#myform input[type='radio'] {
   display: none; /* 라디오박스 감춤 */
 }
 #myform label {
@@ -219,7 +226,7 @@ textarea {
   width: 200px;
   font-size: 25px;
 }
-#myform2 input[type="radio"] {
+#myform2 input[type='radio'] {
   display: none; /* 라디오박스 감춤 */
 }
 #myform2 label {

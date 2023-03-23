@@ -19,13 +19,14 @@ body {
   display: flex;
 }
 
-h3 {
-  margin: 15px 0;
+h2 {
+  margin-bottom: 15px;
 }
 
 img {
-  width: 100%;
+  width: 260px;
   height: 100%;
+  border-radius: 30px;
 }
 
 .swiper1 {
@@ -35,18 +36,16 @@ img {
   height: 200px;
 }
 .swiper-slide {
-  width: 200px;
-  height: 100%;
+  /* width: 200px; */
+  height: 200px;
   text-align: center;
   transition: all 0.5s ease;
   z-index: 4;
-  border-radius: 30px;
   overflow: hidden;
 }
 
 .swiper-slide:hover {
   position: relative;
-
   transform: scale(1.2);
   z-index: 11;
 }

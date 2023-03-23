@@ -59,43 +59,48 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
           </header2>
           <div class="img-container">
             <div class="img-box img-box1">
-              <img src="/static/img/양념치킨.jpeg" alt="양념치킨" />
+              <img src="/static/img/seasoned-chicken.jpeg" alt="양념치킨" />
               <div class="description description1">
                 <div class="foodname name1">양념치킨</div>
                 <div class="price price1">20000원</div>
               </div>
             </div>
             <div class="img-box img-box2">
-              <img src="/static/img/치킨.jpeg" alt="후라이드치킨" />
+              <img src="/static/img/chicken.jpeg" alt="후라이드치킨" />
               <div class="description description2">
                 <div class="foodname name2">후라이드치킨</div>
                 <div class="price price2">19000원</div>
               </div>
             </div>
           </div>
+
           <div class="location">주소</div>
           <div class="detail-location">서울시 마포구 대흥역</div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.313630020194!2d126.94013795081034!3d37.547673979702274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98bcbcab5a0d%3A0xfd0540160f8f958f!2z64yA7Z2l7Jet!5e0!3m2!1sko!2skr!4v1679421172906!5m2!1sko!2skr"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="location-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.313630020194!2d126.94013795081034!3d37.547673979702274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98bcbcab5a0d%3A0xfd0540160f8f958f!2z64yA7Z2l7Jet!5e0!3m2!1sko!2skr!4v1679421172906!5m2!1sko!2skr"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
+
         <div class="container container2">
           <div class="write">리뷰 작성란</div>
           <div class="review-container review-container1">
             <div class="inner-review inner-review1">
               <div class="review">후기작성</div>
-              <textarea
-                class="form-control"
-                placeholder="Leave a comment here"
-                id="floatingTextarea"
-              ></textarea>
             </div>
             <div class="inner-review inner-review2">
               <div class="starContainer">
                 <form name="myform" id="myform" method="post" action="./save">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea"
+                  ></textarea>
+
                   <fieldset>
                     <div class="star">별점</div>
                     <label for="rate1">⭐</label
@@ -118,36 +123,11 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
           </div>
           <div class="review-gathering">리뷰모음</div>
           <div class="review-container review-container2">
-            <div class="nickname">닉네임</div>
             <div class="opinionbox">
               <div class="opinion1">바삭바삭하고 맛있었습니다~!</div>
             </div>
-            <div class="starbox">
-              <form name="myform2" id="myform2" method="post2" action="./save">
-                <fieldset2>
-                  <div class="star2"></div>
-                  <label for="rate1">⭐</label
-                  ><input type="radio" name="rating" value="1" id="rate1" />
-                  <label for="rate2">⭐</label
-                  ><input type="radio" name="rating" value="2" id="rate2" />
-                  <label for="rate3">⭐</label
-                  ><input type="radio" name="rating" value="3" id="rate3" />
-                  <label for="rate4">⭐</label
-                  ><input type="radio" name="rating" value="4" id="rate4" />
-                  <label for="rate5">⭐</label
-                  ><input type="radio" name="rating" value="5" id="rate5" />
-                </fieldset2>
-              </form>
-            </div>
 
             <div class="thumb thumb1">👍</div>
-            <!-- <script>
-              Change() {
-    let [good, goodchange] = useState(0);
-<span onClick={()=>{good+1}}>👍</span>{good}
-}
-Change();
-            </script> -->
           </div>
         </div>
       </div>

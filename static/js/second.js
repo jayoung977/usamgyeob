@@ -4,7 +4,7 @@ const swiper = new Swiper('.swiper', {
   autoplay: true,
   mousewheel: true,
   speed: 2000,
-  spaceBetween: 20,
+  spaceBetween: 0,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
