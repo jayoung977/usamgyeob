@@ -194,3 +194,6 @@ iframe {
 .reviews input[type="radio"] {
   display: none; /* 라디오박스 감춤 */
 }
+hr {
+  width: 100%;
+}
