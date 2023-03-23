@@ -66,8 +66,8 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
           <div class="container-header">
             <div class="title">XX 식당</div>
             <div class="title-meta">
-              <div class="score">평균 평점: <%= avgRating %></div>
-              <div class="type">한식</div>
+              <div class="score">평점</div>
+              <div class="type">종류</div>
             </div>
           </div>
           <div class="recommend">추천메뉴</div>
@@ -100,26 +100,30 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
 
         <div class="container container2">
           <p>리뷰 작성</p> 
-          <form name="myform" id="myform" method="POST" action="/korean/1">
+          <form name="myform" id="myform" method="POST" action="/korean/2">
             <textarea class="form-control" placeholder="리뷰를 남겨주세요" name="review"></textarea>
             <fieldset>
-              <input type="radio" name="rating" value="5" id="rate1" /><label for="rate1">⭐</label>
-              <input type="radio" name="rating" value="4" id="rate2" /><label for="rate2">⭐</label>
-              <input type="radio" name="rating" value="3" id="rate3" /><label for="rate3">⭐</label>
-              <input type="radio" name="rating" value="2" id="rate4" /><label for="rate4">⭐</label>
-              <input type="radio" name="rating" value="1" id="rate5" /><label for="rate5">⭐</label>
+              <div class="star">별점</div>
+              <label for="rate1">⭐</label
+              ><input type="radio" name="rating" value="1" id="rate1" />
+              <label for="rate2">⭐</label
+              ><input type="radio" name="rating" value="2" id="rate2" />
+              <label for="rate3">⭐</label
+              ><input type="radio" name="rating" value="3" id="rate3" />
+              <label for="rate4">⭐</label
+              ><input type="radio" name="rating" value="4" id="rate4" />
+              <label for="rate5">⭐</label
+              ><input type="radio" name="rating" value="5" id="rate5" />
             </fieldset>
             <button type="submit" class="btn">제출</button>
           </form>
           <div class="reviews">
             <p>리뷰</p>
             <% for (let restaurant of restaurants) { %>
-              <div class="review">
-                <%= restaurant.review %> / 평점: <%= restaurant.rating %>
-                <input type="radio" name="like" id="like" /><label for="like">👍</label>
-              </div>
+              <div class="review"><%= restaurant.review %>👍</div>
             <% } %>
           </div>
+
         </div>
       </div>
     </main>

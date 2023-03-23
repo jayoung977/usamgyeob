@@ -2,40 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-}
-
-.container {
-  width: 60%;
-  margin: 5rem auto;
-  text-align: center;
-}
-
-h1 {
-  padding: 3rem 0;
-  text-align: center;
-}
-
-ul.maze {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-rows: repeat(15, 1rem);
-  grid-template-columns: repeat(15, 1rem);
-  justify-content: center;
-  align-items: center;
-  gap: .5rem;
-}
-
-ul.maze li {
-  width: 1rem;
-  height: 1rem;
-  font-weight: bold;
-  background-color: royalblue;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 }
 
 #backdrop {
@@ -66,6 +33,15 @@ ul.maze li {
   display: none;
 }
 
+#modal h1 {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+#modal h2 {
+
+}
+
 #modal a {
   color: red;
   font-style: italic;
@@ -73,5 +49,40 @@ ul.maze li {
 }
 
 .container {
+  width: 60%;
+  margin: 5rem auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+#bomb {
+  display: block;
+  max-width: 200px;
+  margin-bottom: 2rem;
+}
+
+ul.maze {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(15, 1rem);
+  grid-template-columns: repeat(15, 1rem);
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+ul.maze li {
+  width: 1rem;
+  height: 1rem;
+  font-weight: bold;
+  background-color: royalblue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

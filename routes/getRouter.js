@@ -1,16 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 
-const koreanPath = path.join(__dirname, ".." , "data", "korean.json");
-const chinesePath = path.join(__dirname, "..", "data", "chinese.json");
-const westernPath = path.join(__dirname, "..", "data", "western.json");
-
 const express = require("express");
 const router = express.Router();
 
 // 메인
 router.get("/", (req, res) => {
-  res.render("index");  
+  res.render("index_temp");  
  });
 // 더미
 router.get("/maze", (req, res)=> {
@@ -21,39 +17,45 @@ router.get("/yongsan", (req, res)=>{
   res.render("yongsan");
 });
 
-router.get("/yongsan/third", function(req, res) {
-  res.render("restaurants/third");
-})
-
 router.get("/korean/:id", (req, res)=>{
   const id = req.params.id;
+  const koreanPath = path.join(__dirname, ".." , "data", `korean${id}.json`);
 
   // 파일 읽기
   const jsonData = fs.readFileSync(koreanPath);
   const restaurants = JSON.parse(jsonData);
 
+  let sum = 0;
+  let avgRating = 0;
+
+  for (let restaurant of restaurants) {
+    sum += +restaurant.rating; // 문자열을 숫자로 타입 변환
+  }
+  if (restaurants.length === 0) {
+    avgRating = 0;
+  } else {
+    avgRating = sum / restaurants.length;
+  }
+
   switch (id) {
     case "1":
       res.render("restaurants/korean1", {
-        numberOfRestaurants: restaurants.length,
         restaurants: restaurants,
+        avgRating: avgRating
       });
       break;
     case "2":
       res.render("restaurants/korean2", {
-        numberOfRestaurants: restaurants.length,
         restaurants: restaurants,
       });
       break;
     case "3":
       res.render("restaurants/korean3", {
-        numberOfRestaurants: restaurants.length,
         restaurants: restaurants,
       });
       break;
     case "4":
       res.render("restaurants/korean4", {
-        numberOfRestaurants: restaurants.length,
         restaurants: restaurants,
       });
       break;
@@ -61,68 +63,94 @@ router.get("/korean/:id", (req, res)=>{
 });
 router.get("/chinese/:id", (req, res)=>{
   const id = req.params.id;
+  const chinesePath = path.join(__dirname, "..", "data", `chinese${id}.json`);
 
   // 파일 읽기
   const jsonData = fs.readFileSync(chinesePath);
-  const fileData = JSON.parse(jsonData);
+  const restaurants = JSON.parse(jsonData);
+
+  let sum = 0;
+  let avgRating = 0;
+
+  for (let restaurant of restaurants) {
+    sum += +restaurant.rating; // 문자열을 숫자로 타입 변환
+  }
+  if (restaurants.length === 0) {
+    avgRating = 0;
+  } else {
+    avgRating = sum / restaurants.length;
+  }
 
   switch (id) {
     case "1":
       res.render("restaurants/chinese1", {
-        numberOfRestaurants: restaurants.length,
+        avgRating: avgRating,
         restaurants: restaurants,
       });
       break;
     case "2":
       res.render("restaurants/chinese2", {
-        numberOfRestaurants: restaurants.length,
         restaurants: restaurants,
+        avgRating: avgRating
       });
       break;
     case "3":
       res.render("restaurants/chinese3", {
-        numberOfRestaurants: restaurants.length,
         restaurants: restaurants,
+        avgRating: avgRating
       });
       break;
     case "4":
       res.render("restaurants/chinese4", {
-        numberOfRestaurants: restaurants.length,
         restaurants: restaurants,
+        avgRating: avgRating
       });
       break;
   }
 });
 router.get("/western/:id", (req, res)=>{
   const id = req.params.id;
+  const westernPath = path.join(__dirname, "..", "data", `western${id}.json`);
 
   // 파일 읽기
   const jsonData = fs.readFileSync(westernPath);
-  const fileData = JSON.parse(jsonData);
+  const restaurants = JSON.parse(jsonData);
+
+  let sum = 0;
+  let avgRating = 0;
+
+  for (let restaurant of restaurants) {
+    sum += +restaurant.rating; // 문자열을 숫자로 타입 변환
+  }
+  if (restaurants.length === 0) {
+    avgRating = 0;
+  } else {
+    avgRating = sum / restaurants.length;
+  }
 
   switch (id) {
     case "1":
       res.render("restaurants/western1", {
-        numberOfRestaurants: restaurants.length,
         restaurants: restaurants,
+        avgRating: avgRating
       });
       break;
     case "2":
       res.render("restaurants/western2", {
-        numberOfRestaurants: restaurants.length,
         restaurants: restaurants,
+        avgRating: avgRating
       });
       break;
     case "3":
       res.render("restaurants/western3", {
-        numberOfRestaurants: restaurants.length,
         restaurants: restaurants,
+        avgRating: avgRating
       });
       break;
     case "4":
       res.render("restaurants/western4", {
-        numberOfRestaurants: restaurants.length,
         restaurants: restaurants,
+        avgRating: avgRating
       });
       break;
   }});

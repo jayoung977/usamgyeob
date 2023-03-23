@@ -1,5 +1,7 @@
 const backdropEl = document.getElementById("backdrop");
 const modalEl = document.getElementById("modal");
+const bombEl = document.getElementById("bomb");
+const mazeEl = document.querySelector("ul.maze");
 
 window.onload = gameStart;
 
@@ -62,6 +64,8 @@ function updatePlayer() {
   } else {
     backdropEl.style.display = "block";
     modalEl.style.display = "flex";
+    bombEl.style.display = "none";
+    mazeEl.style.display = "none";
   }
 
   renderMaze();
