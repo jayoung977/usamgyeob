@@ -1,12 +1,20 @@
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "BMJUA";
 }
 a {
   text-decoration: none;
   color: black;
 }
-
 header {
   position: relative;
   width: 100%;
@@ -16,7 +24,6 @@ header {
   /* background-color: pink; */
   align-items: center;
 }
-
 header .brand-logo {
   /* background-color: white; */
   margin-left: 20px;
@@ -24,12 +31,10 @@ header .brand-logo {
 header .brand-logo:hover {
   cursor: pointer;
 }
-
 header .brand-logo .brand-name a {
   font-weight: 700;
   font-size: 1.5rem;
 }
-
 header .brand-logo .brand-script a {
   font-size: 0.9rem;
   white-space: nowrap;
@@ -37,7 +42,6 @@ header .brand-logo .brand-script a {
 header .brand-logo .brand-script a b {
   color: #fe5b05;
 }
-
 header .page-name {
   font-weight: 700;
   font-size: 2rem;
@@ -47,11 +51,11 @@ header .page-name {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 header nav {
   width: 220px;
   font-weight: 700;
   font-size: 1rem;
+  margin-right: 20px;
 }
 header > nav > ul {
   display: flex;

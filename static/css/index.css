@@ -1,9 +1,18 @@
 main .inner {
   height: calc(100vh - 5rem);
-  width: 500px;
+  width: 80vw;
   margin: 0 auto;
   /* background-color: cornflowerblue; */
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+main > h2 {
+  text-align: center;
+  /* margin-top: 20px; */
+}
+main > h2 b {
+  color: rgb(78, 121, 246);
+  /* color: #fe5b05; */
 }

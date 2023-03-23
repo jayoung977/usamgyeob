@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Path Finder</title>
+    <!-- favicon -->
+    <link rel="icon" href="../static/img/favicon-96x96.png" />
+    <link rel="stylesheet" href="../static/css/common.css" />
+    <link rel="stylesheet" href="../static/css/maze.css" />
+    
+
+    <script src="../static/js/maze.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="brand-logo">
+        <div class="brand-name">
+          <a href="/">우삼겹</a>
+        </div>
+        <div class="brand-script">
+          <a href="/"> <b>우</b>리동네 맛집 <b>삼겹</b>줄 </a>
+        </div>
+      </div>
+      <div class="brand-script">
+        <a href="/"> <b>우</b>리동네 맛집 <b>삼겹</b>줄 </a>
+      </div>
+    </div>
+    <div class="page-name"></div>
+    <nav>
+      <ul>
+        <li class="menu-item">
+          <a href="/service_info">서비스 소개</a>
+        </li>
+        <li class="menu-item">
+          <a href="/faq">FAQ</a>
+        </li>
+        <li class="menu-item">
+          <a href="/customer_service">고객센터</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="backdrop"></div>
+    <div id="modal">
+        <img src="../static/img/explosion.png" alt="bomb" width="300px">
+        <h1>안타깝게도 이 지역에는 맛집이 없습니다</h1>
+        <h2><a href="/customer_service">고객센터</a> 에 문의해주시길 바랍니다</h2>
+    </div>
+
+    <div class="container">
+      <img id="bomb" src="../../static/img/bomb.png" alt="폭탄">
+      <ul class="maze">
+        <li class="row-1 col-1"></li>
+        <li class="row-1 col-2"></li>
+        <li class="row-1 col-3"></li>
+        <li class="row-1 col-4"></li>
+        <li class="row-1 col-5"></li>
+        <li class="row-1 col-6"></li>
+        <li class="row-1 col-7"></li>
+        <li class="row-1 col-8"></li>
+        <li class="row-1 col-9"></li>
+        <li class="row-1 col-10"></li>
+        <li class="row-1 col-11"></li>
+        <li class="row-1 col-12"></li>
+        <li class="row-1 col-13"></li>
+        <li class="row-1 col-14"></li>
+        <li class="row-1 col-15"></li>
+
+        <li class="row-2 col-1"></li>
+        <li class="row-2 col-2"></li>
+        <li class="row-2 col-3"></li>
+        <li class="row-2 col-4"></li>
+        <li class="row-2 col-5"></li>
+        <li class="row-2 col-6"></li>
+        <li class="row-2 col-7"></li>
+        <li class="row-2 col-8"></li>
+        <li class="row-2 col-9"></li>
+        <li class="row-2 col-10"></li>
+        <li class="row-2 col-11"></li>
+        <li class="row-2 col-12"></li>
+        <li class="row-2 col-13"></li>
+        <li class="row-2 col-14"></li>
+        <li class="row-2 col-15"></li>
+
+        <li class="row-3 col-1"></li>
+        <li class="row-3 col-2"></li>
+        <li class="row-3 col-3"></li>
+        <li class="row-3 col-4"></li>
+        <li class="row-3 col-5"></li>
+        <li class="row-3 col-6"></li>
+        <li class="row-3 col-7"></li>
+        <li class="row-3 col-8"></li>
+        <li class="row-3 col-9"></li>
+        <li class="row-3 col-10"></li>
+        <li class="row-3 col-11"></li>
+        <li class="row-3 col-12"></li>
+        <li class="row-3 col-13"></li>
+        <li class="row-3 col-14"></li>
+        <li class="row-3 col-15"></li>
+
+        <li class="row-4 col-1"></li>
+        <li class="row-4 col-2"></li>
+        <li class="row-4 col-3"></li>
+        <li class="row-4 col-4"></li>
+        <li class="row-4 col-5"></li>
+        <li class="row-4 col-6"></li>
+        <li class="row-4 col-7"></li>
+        <li class="row-4 col-8"></li>
+        <li class="row-4 col-9"></li>
+        <li class="row-4 col-10"></li>
+        <li class="row-4 col-11"></li>
+        <li class="row-4 col-12"></li>
+        <li class="row-4 col-13"></li>
+        <li class="row-4 col-14"></li>
+        <li class="row-4 col-15"></li>
+
+        <li class="row-5 col-1"></li>
+        <li class="row-5 col-2"></li>
+        <li class="row-5 col-3"></li>
+        <li class="row-5 col-4"></li>
+        <li class="row-5 col-5"></li>
+        <li class="row-5 col-6"></li>
+        <li class="row-5 col-7"></li>
+        <li class="row-5 col-8"></li>
+        <li class="row-5 col-9"></li>
+        <li class="row-5 col-10"></li>
+        <li class="row-5 col-11"></li>
+        <li class="row-5 col-12"></li>
+        <li class="row-5 col-13"></li>
+        <li class="row-5 col-14"></li>
+        <li class="row-5 col-15"></li>
+
+        <li class="row-6 col-1"></li>
+        <li class="row-6 col-2"></li>
+        <li class="row-6 col-3"></li>
+        <li class="row-6 col-4"></li>
+        <li class="row-6 col-5"></li>
+        <li class="row-6 col-6"></li>
+        <li class="row-6 col-7"></li>
+        <li class="row-6 col-8"></li>
+        <li class="row-6 col-9"></li>
+        <li class="row-6 col-10"></li>
+        <li class="row-6 col-11"></li>
+        <li class="row-6 col-12"></li>
+        <li class="row-6 col-13"></li>
+        <li class="row-6 col-14"></li>
+        <li class="row-6 col-15"></li>
+
+        <li class="row-7 col-1"></li>
+        <li class="row-7 col-2"></li>
+        <li class="row-7 col-3"></li>
+        <li class="row-7 col-4"></li>
+        <li class="row-7 col-5"></li>
+        <li class="row-7 col-6"></li>
+        <li class="row-7 col-7"></li>
+        <li class="row-7 col-8"></li>
+        <li class="row-7 col-9"></li>
+        <li class="row-7 col-10"></li>
+        <li class="row-7 col-11"></li>
+        <li class="row-7 col-12"></li>
+        <li class="row-7 col-13"></li>
+        <li class="row-7 col-14"></li>
+        <li class="row-7 col-15"></li>
+
+        <li class="row-8 col-1"></li>
+        <li class="row-8 col-2"></li>
+        <li class="row-8 col-3"></li>
+        <li class="row-8 col-4"></li>
+        <li class="row-8 col-5"></li>
+        <li class="row-8 col-6"></li>
+        <li class="row-8 col-7"></li>
+        <li class="row-8 col-8"></li>
+        <li class="row-8 col-9"></li>
+        <li class="row-8 col-10"></li>
+        <li class="row-8 col-11"></li>
+        <li class="row-8 col-12"></li>
+        <li class="row-8 col-13"></li>
+        <li class="row-8 col-14"></li>
+        <li class="row-8 col-15"></li>
+
+        <li class="row-9 col-1"></li>
+        <li class="row-9 col-2"></li>
+        <li class="row-9 col-3"></li>
+        <li class="row-9 col-4"></li>
+        <li class="row-9 col-5"></li>
+        <li class="row-9 col-6"></li>
+        <li class="row-9 col-7"></li>
+        <li class="row-9 col-8"></li>
+        <li class="row-9 col-9"></li>
+        <li class="row-9 col-10"></li>
+        <li class="row-9 col-11"></li>
+        <li class="row-9 col-12"></li>
+        <li class="row-9 col-13"></li>
+        <li class="row-9 col-14"></li>
+        <li class="row-9 col-15"></li>
+
+        <li class="row-10 col-1"></li>
+        <li class="row-10 col-2"></li>
+        <li class="row-10 col-3"></li>
+        <li class="row-10 col-4"></li>
+        <li class="row-10 col-5"></li>
+        <li class="row-10 col-6"></li>
+        <li class="row-10 col-7"></li>
+        <li class="row-10 col-8"></li>
+        <li class="row-10 col-9"></li>
+        <li class="row-10 col-10"></li>
+        <li class="row-10 col-11"></li>
+        <li class="row-10 col-12"></li>
+        <li class="row-10 col-13"></li>
+        <li class="row-10 col-14"></li>
+        <li class="row-10 col-15"></li>
+
+        <li class="row-11 col-1"></li>
+        <li class="row-11 col-2"></li>
+        <li class="row-11 col-3"></li>
+        <li class="row-11 col-4"></li>
+        <li class="row-11 col-5"></li>
+        <li class="row-11 col-6"></li>
+        <li class="row-11 col-7"></li>
+        <li class="row-11 col-8"></li>
+        <li class="row-11 col-9"></li>
+        <li class="row-11 col-10"></li>
+        <li class="row-11 col-11"></li>
+        <li class="row-11 col-12"></li>
+        <li class="row-11 col-13"></li>
+        <li class="row-11 col-14"></li>
+        <li class="row-11 col-15"></li>
+
+        <li class="row-12 col-1"></li>
+        <li class="row-12 col-2"></li>
+        <li class="row-12 col-3"></li>
+        <li class="row-12 col-4"></li>
+        <li class="row-12 col-5"></li>
+        <li class="row-12 col-6"></li>
+        <li class="row-12 col-7"></li>
+        <li class="row-12 col-8"></li>
+        <li class="row-12 col-9"></li>
+        <li class="row-12 col-10"></li>
+        <li class="row-12 col-11"></li>
+        <li class="row-12 col-12"></li>
+        <li class="row-12 col-13"></li>
+        <li class="row-12 col-14"></li>
+        <li class="row-12 col-15"></li>
+
+        <li class="row-13 col-1"></li>
+        <li class="row-13 col-2"></li>
+        <li class="row-13 col-3"></li>
+        <li class="row-13 col-4"></li>
+        <li class="row-13 col-5"></li>
+        <li class="row-13 col-6"></li>
+        <li class="row-13 col-7"></li>
+        <li class="row-13 col-8"></li>
+        <li class="row-13 col-9"></li>
+        <li class="row-13 col-10"></li>
+        <li class="row-13 col-11"></li>
+        <li class="row-13 col-12"></li>
+        <li class="row-13 col-13"></li>
+        <li class="row-13 col-14"></li>
+        <li class="row-13 col-15"></li>
+
+        <li class="row-14 col-1"></li>
+        <li class="row-14 col-2"></li>
+        <li class="row-14 col-3"></li>
+        <li class="row-14 col-4"></li>
+        <li class="row-14 col-5"></li>
+        <li class="row-14 col-6"></li>
+        <li class="row-14 col-7"></li>
+        <li class="row-14 col-8"></li>
+        <li class="row-14 col-9"></li>
+        <li class="row-14 col-10"></li>
+        <li class="row-14 col-11"></li>
+        <li class="row-14 col-12"></li>
+        <li class="row-14 col-13"></li>
+        <li class="row-14 col-14"></li>
+        <li class="row-14 col-15"></li>
+
+        <li class="row-15 col-1"></li>
+        <li class="row-15 col-2"></li>
+        <li class="row-15 col-3"></li>
+        <li class="row-15 col-4"></li>
+        <li class="row-15 col-5"></li>
+        <li class="row-15 col-6"></li>
+        <li class="row-15 col-7"></li>
+        <li class="row-15 col-8"></li>
+        <li class="row-15 col-9"></li>
+        <li class="row-15 col-10"></li>
+        <li class="row-15 col-11"></li>
+        <li class="row-15 col-12"></li>
+        <li class="row-15 col-13"></li>
+        <li class="row-15 col-14"></li>
+        <li class="row-15 col-15"></li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
