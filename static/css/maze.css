@@ -2,17 +2,69 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  overflow: hidden;
+}
+
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  display: none;
+}
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aliceblue;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 600px;
+
+  display: none;
+}
+
+#modal h1 {
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#modal h2 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+#modal a {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .container {
-  width: 100%;
-  margin: 3rem auto;
+  width: 60%;
+  margin: 5rem auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  padding: 3rem 0;
-  text-align: center;
+#bomb {
+  display: block;
+  max-width: 200px;
+  margin-bottom: 2rem;
 }
 
 ul.maze {
@@ -20,16 +72,16 @@ ul.maze {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-rows: repeat(15, 2rem);
-  grid-template-columns: repeat(15, 2rem);
+  grid-template-rows: repeat(15, 1rem);
+  grid-template-columns: repeat(15, 1rem);
   justify-content: center;
   align-items: center;
   gap: 0.1rem;
 }
 
 ul.maze li {
-  width: 2rem;
-  height: 2rem;
+  width: 1rem;
+  height: 1rem;
   font-weight: bold;
   background-color: #dddddd;
   border-radius: 5%;
@@ -47,4 +99,15 @@ button {
   border: 1px solid #dddddd;
   color: white;
   background-color: #b5e045;
+}
+@media (max-width: 60rem) {
+  #modal {
+    width: 400px;
+  }
+  #modal h1 {
+    font-size: 0.9rem;
+  }
+  #modal h2 {
+    font-size: 0.6rem;
+  }
 }
