@@ -234,9 +234,5 @@ function shortestPath() {
   points.push(new Pos(y, x));
 
   points.reverse();
-
-  // for (let point of points) {
-  //   maze[point.y][point.x] = 2;
-  // }
 }
 

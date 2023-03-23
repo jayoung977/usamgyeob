@@ -5,4 +5,3 @@
     areaElement.addEventListener("mouseover", showArea);
   }
  };
-
