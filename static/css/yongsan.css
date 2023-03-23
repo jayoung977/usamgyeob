@@ -10,7 +10,8 @@ h2 {
 }
 
 img {
-  width: 260px;
+  object-fit: cover;
+  width: 100%;
   height: 100%;
   border-radius: 30px;
 }
@@ -18,11 +19,12 @@ img {
 .swiper1 {
   position: relative;
 }
+
 .swiper-wrapper {
   height: 200px;
 }
 .swiper-slide {
-  /* width: 200px; */
+  width: 100%;
   height: 200px;
   text-align: center;
   transition: all 0.5s ease;
