@@ -6,7 +6,7 @@ const router = express.Router();
 
 // 메인
 router.get("/", (req, res) => {
-  res.render("index_temp");  
+  res.render("index");  
  });
 // 더미
 router.get("/maze", (req, res)=> {

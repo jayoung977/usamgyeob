@@ -28,17 +28,12 @@ main .inner p {
   bottom: 5%;
 }
 
-@media (max-width: 60rem) {
-  main img {
-    width: 100%;
-  }
-
   main .inner p {
     font-size: 10px;
     width: 10vw;
     max-height: 10vh;
   }
-}
+
 
 
 /* temp */
@@ -67,25 +62,5 @@ main .inner p {
   background-color: yellowgreen;
   color: black;
   font-weight: bold;
-}
-
-@media (max-width: 60rem) {
-  .cards {
-    margin: 0 auto;
-    display: grid;
-    gap: .7rem;
-    grid-template-columns: repeat(5, 120px);
-    grid-template-rows: repeat(5, 80px);
-  }
-}
-
-@media (max-width: 40rem) {
-  .cards {
-    margin: 0 auto;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(3, 90px);
-    grid-template-rows: repeat(8, 60px);
-  }
 }
 
