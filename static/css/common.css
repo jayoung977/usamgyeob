@@ -1,6 +1,15 @@
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "BMJUA";
 }
 a {
   text-decoration: none;
@@ -31,7 +40,7 @@ header .brand-logo .brand-script a {
   white-space: nowrap;
 }
 header .brand-logo .brand-script a b {
-  color: #FE5B05;
+  color: #fe5b05;
 }
 header .page-name {
   font-weight: 700;
@@ -46,6 +55,7 @@ header nav {
   width: 220px;
   font-weight: 700;
   font-size: 1rem;
+  margin-right: 20px;
 }
 header > nav > ul {
   display: flex;
@@ -53,6 +63,7 @@ header > nav > ul {
   list-style-type: none;
   column-gap: 5px;
 }
+
 main {
   width: 80%;
   height: 100vh;

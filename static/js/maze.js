@@ -1,8 +1,19 @@
+const backdropEl = document.getElementById("backdrop");
+const modalEl = document.getElementById("modal");
+const bombEl = document.getElementById("bomb");
+const mazeEl = document.querySelector("ul.maze");
+
+window.onload = gameStart;
+
 // 0 is block, 1 is empty, 2 is player
 let maze = [];
 let found = [];
 let visited = [];
 let parents = [];
+
+let points = [];
+
+let index = 0;
 
 const deltaY = [-1, 0, +1, 0];
 const deltaX = [0, +1, 0, -1];
@@ -31,11 +42,6 @@ class Queue {
   }
 }
 
-const buttonElement = document.querySelector("button");
-
-// 버튼 '클릭'하면 게임 시작
-buttonElement.addEventListener("click", gameStart);
-
 // 게임 시작 함수
 function gameStart() {
   resetMaze();
@@ -45,17 +51,34 @@ function gameStart() {
   BFS();
 
   renderMaze();
+
+  setInterval(updatePlayer, 150);
+}
+
+// 플레이어 좌표 갱신
+function updatePlayer() {
+  if (index < points.length) {
+    maze[points[index].y][points[index].x] = 2;
+    index++;
+  } else {
+    backdropEl.style.display = "block";
+    modalEl.style.display = "flex";
+    bombEl.style.display = "none";
+    mazeEl.style.display = "none";
+  }
+
+  renderMaze();
 }
 
 // 2차원 배열 생성 함수
 function createArray2d(row, col) {
-  let array2d = new Array(row);  
- 
-	for(let i = 0; i < col; i++) { 
-		array2d[i] = new Array(col);  
-	} 
- 
-	return array2d; 
+  let array2d = new Array(row);
+
+  for (let i = 0; i < col; i++) {
+    array2d[i] = new Array(col);
+  }
+
+  return array2d;
 }
 
 // 미로 초기화 함수
@@ -64,6 +87,8 @@ function resetMaze() {
   found = createArray2d(15, 15);
   visited = createArray2d(15, 15);
   parents = createArray2d(15, 15);
+  points = [];
+  index = 0;
 
   for (let y = 0; y < 15; y++) {
     for (let x = 0; x < 15; x++) {
@@ -80,11 +105,11 @@ function generateRandomMaze() {
   // 1. 미로를 막는다
   for (let y = 0; y < 15; y++) {
     for (let x = 0; x < 15; x++) {
-        if (x % 2 === 0 || y % 2 === 0) {
-          maze[y][x] = 0;
-        } else {
-          maze[y][x] = 1;
-        }
+      if (x % 2 === 0 || y % 2 === 0) {
+        maze[y][x] = 0;
+      } else {
+        maze[y][x] = 1;
+      }
     }
   }
 
@@ -111,7 +136,7 @@ function generateRandomMaze() {
         count++;
       } else {
         let random = Math.floor(Math.random() * (count + 1)); // 0 ~ counter
-        maze[y + 1][x - (2 * random)] = 1;
+        maze[y + 1][x - 2 * random] = 1;
         count = 0;
       }
     }
@@ -122,14 +147,19 @@ function generateRandomMaze() {
 function renderMaze() {
   for (let y = 0; y < 15; y++) {
     for (let x = 0; x < 15; x++) {
-      let liElement = document.querySelector(`.row-${y+1}.col-${x+1}`);
+      let liElement = document.querySelector(`.row-${y + 1}.col-${x + 1}`);
+
+      if ((y === 1 && x === 1) || (y === 13 && x === 13)) {
+        liElement.style.backgroundColor = "red";
+        continue;
+      }
 
       if (maze[y][x] === 0) {
-        liElement.style.backgroundColor = "red";
+        liElement.style.backgroundColor = "#dddddd"; //gray
       } else if (maze[y][x] === 2) {
-        liElement.style.backgroundColor = "yellow";
+        liElement.style.backgroundColor = "#FFC701"; //yellow
       } else {
-        liElement.style.backgroundColor = "royalblue";
+        liElement.style.backgroundColor = "#7398C1"; //blue
       }
     }
   }
@@ -160,7 +190,10 @@ function BFS() {
 
     // 다음 좌표 후보
     for (let i = 0; i < 4; i++) {
-      let nextPosition = new Pos(nowPosition.y + deltaY[i], nowPosition.x + deltaX[i]);
+      let nextPosition = new Pos(
+        nowPosition.y + deltaY[i],
+        nowPosition.x + deltaX[i]
+      );
 
       if (maze[nextPosition.y][nextPosition.x] === 0) {
         continue;
@@ -185,7 +218,7 @@ function shortestPath() {
   let y = 13;
   let x = 13;
 
-  const points = [];
+  points = [];
 
   points.push(new Pos(y, x));
 
@@ -193,11 +226,9 @@ function shortestPath() {
     if (parents[y][x].y === y && parents[y][x].x === x) {
       break;
     }
-    console.log(parents[y][x]);
 
     y = parents[y][x].y;
     x = parents[y][x].x;
-
 
     points.push(new Pos(y, x));
   }
@@ -205,8 +236,4 @@ function shortestPath() {
   points.push(new Pos(y, x));
 
   points.reverse();
-
-  for (let point of points) {
-    maze[point.y][point.x] = 2;
-  }
 }
