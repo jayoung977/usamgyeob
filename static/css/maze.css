@@ -29,23 +29,27 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  width: 600px;
 
   display: none;
 }
 
 #modal h1 {
-  padding: 3rem 0;
+  padding: 1.5rem 0;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 #modal h2 {
-
+  text-align: center;
+  font-size: 1rem;
 }
 
 #modal a {
   color: red;
   font-style: italic;
   font-weight: bold;
+
 }
 
 .container {
@@ -85,4 +89,17 @@ ul.maze li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 60rem) {
+  #modal {
+    width: 400px;
+  }
+  #modal h1 {
+    font-size: .9rem;
+
+  }
+  #modal h2 {
+    font-size: .6rem;
+  }
 }

@@ -41,14 +41,13 @@ main .inner p {
 }
 
 
-
 /* temp */
 .cards {
   margin: 0 auto;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(5, 10vw);
-  grid-template-rows: repeat(5, 15vh);
+  grid-template-columns: repeat(5, 150px);
+  grid-template-rows: repeat(5, 100px);
 }
 .card {
   background-color: dodgerblue;
@@ -71,6 +70,22 @@ main .inner p {
 }
 
 @media (max-width: 60rem) {
+  .cards {
+    margin: 0 auto;
+    display: grid;
+    gap: .7rem;
+    grid-template-columns: repeat(5, 120px);
+    grid-template-rows: repeat(5, 80px);
+  }
+}
 
+@media (max-width: 40rem) {
+  .cards {
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(8, 60px);
+  }
 }
 

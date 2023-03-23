@@ -138,15 +138,15 @@ main {
 @media (max-width: 40rem) {
   header .brand-logo .brand-name a {
     font-weight: 700;
-    font-size: 4vw;
+    font-size: 15px;
   }
   header .brand-logo .brand-script a {
-    font-size: 2vw;
+    font-size: 9px;
     white-space: nowrap;
   }
   header .page-name {
     font-weight: 700;
-    font-size: 5vw;
+    font-size: 20px;
     text-align: center;
     position: absolute;
     top: 50%;
