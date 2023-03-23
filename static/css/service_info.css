@@ -44,10 +44,24 @@ main .cards .card {
 }
 
 main .cards img {
+  object-fit: cover;
   width: 100%;
   height: 250px;
   border-radius: 10px 10px 0 0;
 }
+main .card3 img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  border-radius: 10px 10px 0 0;
+}
+main .card5 img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  border-radius: 10px 10px 0 0;
+}
+
 main .cards .card-body {
   width: 100%;
   padding: 30px;
