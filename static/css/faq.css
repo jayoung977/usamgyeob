@@ -16,13 +16,16 @@ main > h2 {
 
 .que {
   position: relative;
-  padding: 17px 0;
+  padding: 17px 0 17px 14px;
   cursor: pointer;
   font-size: 1.2rem;
   border-bottom: 1px solid #dddddd;
 }
+.que span {
+  padding-left: 10px;
+}
 
-.que::before {
+/* .que::before {
   padding-left: 10px;
   display: inline-block;
   content: "Q";
@@ -30,7 +33,7 @@ main > h2 {
   font-weight: bold;
   color: #7398c1;
   margin: 0 5px;
-}
+} */
 .que.on {
   /* font-weight: bold; */
   /* color: #006633; */
@@ -47,8 +50,8 @@ main > h2 {
   overflow: hidden;
   font-size: 1rem;
   /* background-color: #f4f4f2; */
-  padding: 27px 0;
-  padding-left: 30px;
+  padding: 27px 0 27px 30px;
+  /* padding-left: ; */
   border-bottom: 1px solid #dddddd;
 }
 

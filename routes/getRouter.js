@@ -9,17 +9,17 @@ router.get("/", (req, res) => {
   res.render("index");  
  });
 // 더미
-router.get("/maze", (req, res)=> {
+router.get("/maze", (req, res) => {
   res.render("dummy/maze");
-})
+});
 // 용산구
-router.get("/yongsan", (req, res)=>{
+router.get("/yongsan", (req, res) => {
   res.render("yongsan");
 });
 
-router.get("/korean/:id", (req, res)=>{
+router.get("/korean/:id", (req, res) => {
   const id = req.params.id;
-  const koreanPath = path.join(__dirname, ".." , "data", `korean${id}.json`);
+  const koreanPath = path.join(__dirname, "..", "data", `korean${id}.json`);
 
   // 파일 읽기
   const jsonData = fs.readFileSync(koreanPath);
@@ -41,7 +41,7 @@ router.get("/korean/:id", (req, res)=>{
     case "1":
       res.render("restaurants/korean1", {
         restaurants: restaurants,
-        avgRating: avgRating
+        avgRating: avgRating,
       });
       break;
     case "2":
@@ -61,7 +61,7 @@ router.get("/korean/:id", (req, res)=>{
       break;
   }
 });
-router.get("/chinese/:id", (req, res)=>{
+router.get("/chinese/:id", (req, res) => {
   const id = req.params.id;
   const chinesePath = path.join(__dirname, "..", "data", `chinese${id}.json`);
 
@@ -91,24 +91,24 @@ router.get("/chinese/:id", (req, res)=>{
     case "2":
       res.render("restaurants/chinese2", {
         restaurants: restaurants,
-        avgRating: avgRating
+        avgRating: avgRating,
       });
       break;
     case "3":
       res.render("restaurants/chinese3", {
         restaurants: restaurants,
-        avgRating: avgRating
+        avgRating: avgRating,
       });
       break;
     case "4":
       res.render("restaurants/chinese4", {
         restaurants: restaurants,
-        avgRating: avgRating
+        avgRating: avgRating,
       });
       break;
   }
 });
-router.get("/western/:id", (req, res)=>{
+router.get("/western/:id", (req, res) => {
   const id = req.params.id;
   const westernPath = path.join(__dirname, "..", "data", `western${id}.json`);
 
@@ -132,43 +132,44 @@ router.get("/western/:id", (req, res)=>{
     case "1":
       res.render("restaurants/western1", {
         restaurants: restaurants,
-        avgRating: avgRating
+        avgRating: avgRating,
       });
       break;
     case "2":
       res.render("restaurants/western2", {
         restaurants: restaurants,
-        avgRating: avgRating
+        avgRating: avgRating,
       });
       break;
     case "3":
       res.render("restaurants/western3", {
         restaurants: restaurants,
-        avgRating: avgRating
+        avgRating: avgRating,
       });
       break;
     case "4":
       res.render("restaurants/western4", {
         restaurants: restaurants,
-        avgRating: avgRating
+        avgRating: avgRating,
       });
       break;
-  }});
+  }
+});
 
-  router.get("/service_info", (req, res) => {
-    res.render("info/service_info");
-  });
-  router.get("/faq", (req, res) => {
-    res.render("info/faq");
-  });
-  router.get("/customer_service", (req, res) => {
-    res.render("info/customer_service");
-  });
-  router.get("/customer_service/suggestion", (req, res) => {
-    res.render("info/suggestion");
-  });
-  router.get("/customer_service/inquiry", (req, res) => {
-    res.render("info/inquiry");
-  });
+router.get("/service_info", (req, res) => {
+  res.render("info/service_info");
+});
+router.get("/faq", (req, res) => {
+  res.render("info/faq");
+});
+router.get("/customer_service", (req, res) => {
+  res.render("info/customer_service");
+});
+router.get("/customer_service/suggestion", (req, res) => {
+  res.render("info/suggestion");
+});
+router.get("/customer_service/inquiry", (req, res) => {
+  res.render("info/inquiry");
+});
 
 module.exports = router;

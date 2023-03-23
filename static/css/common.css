@@ -1,6 +1,15 @@
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "BMJUA";
 }
 a {
   text-decoration: none;
@@ -29,7 +38,7 @@ header .brand-logo .brand-script a {
   white-space: nowrap;
 }
 header .brand-logo .brand-script a b {
-  color: #FE5B05;
+  color: #fe5b05;
 }
 header .page-name {
   font-weight: 700;
@@ -45,72 +54,12 @@ header nav {
   font-weight: 700;
   font-size: 1rem;
   margin-right: 20px;
-
-  display: none;
 }
 header > nav > ul {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
   column-gap: 5px;
-}
-
-#drawer-btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 2rem;
-  height: 2rem;
-  padding: .1rem;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-#drawer-btn span {
-  width: 2rem;
-  height: 2px;
-  background-color: rgb(131, 115, 94);
-}
-
-#side-bar {
-  display: none;
-}
-
-#side-bar.open {
-  display: block;
-  position: fixed;
-  z-index: 10;
-  top: 5rem;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 5rem);
-  background-color: rgb(0, 0, 0);
-}
-
-#side-bar ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 3rem 0;
-  padding: 0;
-}
-
-#side-bar ul li {
-  margin: 1.5rem 0;
-}
-
-#side-bar ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
-}
-
-#side-bar ul li a:hover,
-#side-bar ul li a:active {
-  color: rgb(223, 94, 94);
 }
 
 main {
