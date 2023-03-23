@@ -49,13 +49,13 @@ function gameStart() {
 
 // 2차원 배열 생성 함수
 function createArray2d(row, col) {
-  let array2d = new Array(row);  
- 
-	for(let i = 0; i < col; i++) { 
-		array2d[i] = new Array(col);  
-	} 
- 
-	return array2d; 
+  let array2d = new Array(row);
+
+  for (let i = 0; i < col; i++) {
+    array2d[i] = new Array(col);
+  }
+
+  return array2d;
 }
 
 // 미로 초기화 함수
@@ -80,11 +80,11 @@ function generateRandomMaze() {
   // 1. 미로를 막는다
   for (let y = 0; y < 15; y++) {
     for (let x = 0; x < 15; x++) {
-        if (x % 2 === 0 || y % 2 === 0) {
-          maze[y][x] = 0;
-        } else {
-          maze[y][x] = 1;
-        }
+      if (x % 2 === 0 || y % 2 === 0) {
+        maze[y][x] = 0;
+      } else {
+        maze[y][x] = 1;
+      }
     }
   }
 
@@ -111,7 +111,7 @@ function generateRandomMaze() {
         count++;
       } else {
         let random = Math.floor(Math.random() * (count + 1)); // 0 ~ counter
-        maze[y + 1][x - (2 * random)] = 1;
+        maze[y + 1][x - 2 * random] = 1;
         count = 0;
       }
     }
@@ -122,14 +122,14 @@ function generateRandomMaze() {
 function renderMaze() {
   for (let y = 0; y < 15; y++) {
     for (let x = 0; x < 15; x++) {
-      let liElement = document.querySelector(`.row-${y+1}.col-${x+1}`);
+      let liElement = document.querySelector(`.row-${y + 1}.col-${x + 1}`);
 
       if (maze[y][x] === 0) {
-        liElement.style.backgroundColor = "red";
+        liElement.style.backgroundColor = "#dddddd"; //gray
       } else if (maze[y][x] === 2) {
-        liElement.style.backgroundColor = "yellow";
+        liElement.style.backgroundColor = "#FFC701"; //yellow
       } else {
-        liElement.style.backgroundColor = "royalblue";
+        liElement.style.backgroundColor = "#7398C1"; //blue
       }
     }
   }
@@ -160,7 +160,10 @@ function BFS() {
 
     // 다음 좌표 후보
     for (let i = 0; i < 4; i++) {
-      let nextPosition = new Pos(nowPosition.y + deltaY[i], nowPosition.x + deltaX[i]);
+      let nextPosition = new Pos(
+        nowPosition.y + deltaY[i],
+        nowPosition.x + deltaX[i]
+      );
 
       if (maze[nextPosition.y][nextPosition.x] === 0) {
         continue;
@@ -197,7 +200,6 @@ function shortestPath() {
 
     y = parents[y][x].y;
     x = parents[y][x].x;
-
 
     points.push(new Pos(y, x));
   }
