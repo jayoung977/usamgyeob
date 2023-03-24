@@ -40,16 +40,20 @@ img {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: black;
+  color: white;
+  background-color: black;
+  border-radius: 10%;
+  padding: 1rem;
+  font-weight: bold;
   scale: 0.5;
   position: absolute;
-  top: 60%;
+  top: 50%;
 }
 
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 .dropdown {
-  width: 300px;
+  width: 200px;
   margin: 1rem auto;
   display: flex;
   position: relative;
@@ -58,7 +62,7 @@ img {
 }
 
 .dropbtn_icon {
-  font-family: 'Material Icons';
+  font-size: 1rem;
 }
 
 .dropbtn {
@@ -71,7 +75,7 @@ img {
   width: 200px;
   text-align: center;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 .dropdown-content {
   display: none;
@@ -79,8 +83,9 @@ img {
   z-index: 10; /*다른 요소들보다 앞에 배치*/
   font-weight: 400;
   background-color: #f9f9f9;
-  min-width: 200px;
-  overflow: scroll;
+  width: 200px;
+  overflow-y: scroll;
+  border-radius: 4px;
   height: 300px;
 }
 
