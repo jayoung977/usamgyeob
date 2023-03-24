@@ -61,10 +61,10 @@ function updatePlayer() {
     maze[points[index].y][points[index].x] = 2;
     index++;
   } else {
-    // backdropEl.style.display = "block";
-    // modalEl.style.display = "flex";
-    // bombEl.style.display = "none";
-    // mazeEl.style.display = "none";
+    backdropEl.style.display = "block";
+    modalEl.style.display = "flex";
+    bombEl.style.display = "none";
+    mazeEl.style.display = "none";
   }
 
   renderMaze();
