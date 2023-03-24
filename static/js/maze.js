@@ -231,6 +231,8 @@ function shortestPath() {
     x = parents[y][x].x;
 
     points.push(new Pos(y, x));
+
+    console.log(x, y);
   }
 
   points.push(new Pos(y, x));
