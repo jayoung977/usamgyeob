@@ -66,5 +66,7 @@ header > nav > ul {
 
 main {
   width: 80%;
+
+  /* background-color: aqua; */
   margin: 0 auto;
 }
