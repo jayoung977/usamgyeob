@@ -8,8 +8,8 @@ const getAverage = require("../util/getAverage");
 
 // 메인
 router.get("/", (req, res) => {
-  res.render("index");  
- });
+  res.render("index");
+});
 // 더미
 router.get("/maze", (req, res) => {
   res.render("dummy/maze");
@@ -28,11 +28,11 @@ router.get("/korean/:id", (req, res) => {
   const jsonData = fs.readFileSync(koreanPath);
   const reviews = JSON.parse(jsonData);
 
-  let avgRating = getAverage(id);
+  let avgRating = getAverage(id, "korean");
 
   res.render(`restaurants/korean${id}`, {
     reviews: reviews,
-    avgRating: avgRating
+    avgRating: avgRating,
   });
 });
 router.get("/chinese/:id", (req, res) => {
@@ -43,11 +43,11 @@ router.get("/chinese/:id", (req, res) => {
   const jsonData = fs.readFileSync(chinesePath);
   const reviews = JSON.parse(jsonData);
 
-  let avgRating = getAverage(id);
+  let avgRating = getAverage(id, "chinese");
 
   res.render(`restaurants/chinese${id}`, {
     reviews: reviews,
-    avgRating: avgRating
+    avgRating: avgRating,
   });
 });
 router.get("/western/:id", (req, res) => {
@@ -58,11 +58,11 @@ router.get("/western/:id", (req, res) => {
   const jsonData = fs.readFileSync(westernPath);
   const reviews = JSON.parse(jsonData);
 
-  let avgRating = getAverage(id);
+  let avgRating = getAverage(id, "western");
 
-  res.render(`restaurants/chinese${id}`, {
+  res.render(`restaurants/western${id}`, {
     reviews: reviews,
-    avgRating: avgRating
+    avgRating: avgRating,
   });
 });
 

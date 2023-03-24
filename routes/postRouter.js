@@ -25,6 +25,7 @@ router.post("/chinese/:id", function (req, res) {
   // 파일 읽기
   const jsonData = fs.readFileSync(chinesePath);
   const fileData = JSON.parse(jsonData);
+  fileData.push(req.body);
 
   // 파일 쓰기
   fs.writeFileSync(chinesePath, JSON.stringify(fileData));
@@ -38,6 +39,7 @@ router.post("/western/:id", function (req, res) {
   // 파일 읽기
   const jsonData = fs.readFileSync(westernPath);
   const fileData = JSON.parse(jsonData);
+  fileData.push(req.body);
 
   // 파일 쓰기
   fs.writeFileSync(westernPath, JSON.stringify(fileData));
