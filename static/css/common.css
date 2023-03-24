@@ -21,11 +21,9 @@ header {
   height: 5rem;
   display: flex;
   justify-content: space-between;
-  /* background-color: pink; */
   align-items: center;
 }
 header .brand-logo {
-  /* background-color: white; */
   margin-left: 20px;
 }
 header .brand-logo:hover {

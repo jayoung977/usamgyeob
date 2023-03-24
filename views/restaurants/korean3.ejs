@@ -20,7 +20,8 @@
           <a href="/"> <b>우</b>리동네 맛집 <b>삼겹</b>줄 </a>
         </div>
       </div>
-      <!-- <div class="page-name">XX 식당</div> -->
+      <div class="page-name"><a href="/yongsan">용산구</a></div>
+
       <nav>
         <ul>
           <li class="menu-item">
@@ -116,12 +117,11 @@
           </form>
           <div class="reviews">
             <p>리뷰</p>
-            <% for (let restaurant of restaurants) { %>
+            <% for (let i = 0; i < reviews.length; i++) { %>
             <div class="review">
-              <%= restaurant.review %> / 평점: <%= restaurant.rating %>
-              <input type="radio" name="like" id="like" /><label for="like"
-                >👍</label
-              >
+              <%= reviews[i].opinion %> / 평점: <%= reviews[i].rating %>
+              <input type="radio" name="like<%= i %>" id="like<%= i %>" />
+              <label for="like<%= i %>">👍</label>
             </div>
             <% } %>
           </div>

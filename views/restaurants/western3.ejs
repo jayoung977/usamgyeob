@@ -4,16 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>서울시 맛집</title>
-    <link
-      href="
-https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
-"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/static/css/common.css" />
-    <link rel="stylesheet" href="/static/css/third.css" />
-    <script src="../static/js/common.js" defer></script>
+    <title>우삼겹: 우리동네 맛집 삼겹줄</title>
+    <!-- favicon -->
+    <link rel="icon" href="../static/img/favicon-96x96.png" />
+    <link rel="stylesheet" href="../static/css/common.css" />
+    <link rel="stylesheet" href="../static/css/restaurant_detail.css" />
   </head>
   <body>
     <header>
@@ -25,7 +20,7 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
           <a href="/"> <b>우</b>리동네 맛집 <b>삼겹</b>줄 </a>
         </div>
       </div>
-      <!-- <div class="page-name">XX 식당</div> -->
+      <div class="page-name"><a href="/yongsan">용산구</a></div>
       <nav>
         <ul>
           <li class="menu-item">
@@ -39,66 +34,57 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
           </li>
         </ul>
       </nav>
-      <button id="drawer-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </header>
-    <aside id="side-bar">
-      <ul>
-        <li class="menu-item">
-          <a href="/service_info">서비스 소개</a>
-        </li>
-        <li class="menu-item">
-          <a href="/faq">FAQ</a>
-        </li>
-        <li class="menu-item">
-          <a href="/customer_service">고객센터</a>
-        </li>
-      </ul>
-    </aside>
+
     <main>
       <div class="inner">
         <div class="container container1">
           <div class="container-header">
-            <div class="title">XX 식당</div>
+            <div class="title">내추럴 하이</div>
             <div class="title-meta">
               <div class="score">평균 평점: <%= avgRating %></div>
-              <div class="type">한식</div>
+              <div class="type">양식</div>
             </div>
           </div>
+
           <div class="recommend">추천메뉴</div>
-          <hr />
+
           <div class="img-container">
             <div class="img-box img-box1">
-              <img
-                src="../../static/img/seasoned-chicken.jpeg"
-                alt="양념치킨"
-              />
+              <img src="../../static/img/natural.jpg" alt="에그인헬" />
               <div class="description description1">
-                <div class="food">양념치킨</div>
-                <div class="price">20000원</div>
+                <div class="food">에그인헬</div>
+                <div class="price">16000원</div>
               </div>
             </div>
             <div class="img-box img-box2">
-              <img src="../../static/img/chicken.jpeg" alt="후라이드치킨" />
+              <img
+                src="../../static/img/natural-lasagna.jpg"
+                alt="가지라자냐"
+              />
               <div class="description description2">
-                <div class="food">후라이드치킨</div>
-                <div class="price">19000원</div>
+                <div class="food">가지라자냐</div>
+                <div class="price">17000원</div>
               </div>
             </div>
           </div>
+
           <div class="location-box">
-            <div class="location">서울시 마포구 대흥역</div>
+            <div class="location">주소</div>
+            <p>서울특별시 용산구 녹사평대로 248</p>
+
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.313630020194!2d126.94013795081034!3d37.547673979702274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98bcbcab5a0d%3A0xfd0540160f8f958f!2z64yA7Z2l7Jet!5e0!3m2!1sko!2skr!4v1679421172906!5m2!1sko!2skr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.653810715819!2d126.9854150508103!3d37.53965717970378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca248b595a9c7%3A0x7823598543a1257d!2z64K07LaU65-07ZWY7J20!5e0!3m2!1sko!2skr!4v1679647127436!5m2!1sko!2skr"
+              width="600"
+              height="450"
+              style="border: 0"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
+
         <div class="container container2">
           <p>리뷰 작성</p>
           <form name="myform" id="myform" method="POST" action="/korean/1">
@@ -110,35 +96,34 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
             <fieldset>
               <input type="radio" name="rating" value="5" id="rate1" /><label
                 for="rate1"
-                >:별:</label
+                >⭐</label
               >
               <input type="radio" name="rating" value="4" id="rate2" /><label
                 for="rate2"
-                >:별:</label
+                >⭐</label
               >
               <input type="radio" name="rating" value="3" id="rate3" /><label
                 for="rate3"
-                >:별:</label
+                >⭐</label
               >
               <input type="radio" name="rating" value="2" id="rate4" /><label
                 for="rate4"
-                >:별:</label
+                >⭐</label
               >
               <input type="radio" name="rating" value="1" id="rate5" /><label
                 for="rate5"
-                >:별:</label
+                >⭐</label
               >
             </fieldset>
             <button type="submit" class="btn">제출</button>
           </form>
           <div class="reviews">
             <p>리뷰</p>
-            <% for (let restaurant of restaurants) { %>
+            <% for (let i = 0; i < reviews.length; i++) { %>
             <div class="review">
-              <%= restaurant.review %> / 평점: <%= restaurant.rating %>
-              <input type="radio" name="like" id="like" /><label for="like"
-                >:+1:</label
-              >
+              <%= reviews[i].opinion %> / 평점: <%= reviews[i].rating %>
+              <input type="radio" name="like<%= i %>" id="like<%= i %>" />
+              <label for="like<%= i %>">👍</label>
             </div>
             <% } %>
           </div>
@@ -147,3 +132,4 @@ https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
     </main>
   </body>
 </html>
+npm

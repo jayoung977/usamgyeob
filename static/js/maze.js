@@ -247,20 +247,16 @@ function shortestPath() {
     x = parents[y][x].x;
 
     points.push(new Pos(y, x));
-    // console.log("points", new Pos(y, x));
   }
 
   points.push(new Pos(y, x));
 
   points.reverse();
-  // console.log("points", points);
   for (let i = 0; i < points.length - 1; i++) {
     if (points[i].x !== points[i + 1].x && points[i].y !== points[i + 1].y) {
-      // console.log(points[i]);
       xnew = points[i + 1].x;
       y = points[i].y;
       points.splice(i + 1, 0, new Pos(y, xnew));
     }
   }
-  // console.log(points);
 }

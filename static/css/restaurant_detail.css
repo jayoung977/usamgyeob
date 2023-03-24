@@ -7,13 +7,11 @@ main .inner {
 .container {
   width: 100%;
 }
-
 .title {
   text-align: center;
   font-size: 5rem;
   font-weight: bold;
 }
-
 .title-meta {
   display: flex;
   justify-content: space-evenly;
@@ -35,6 +33,7 @@ main .inner {
   padding: 1rem;
 }
 .recommend {
+  margin-top: 1rem;
   text-align: center;
   width: 80%;
   margin: 0 auto;
@@ -53,7 +52,7 @@ main .inner {
   align-items: center;
 }
 .img-box {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .description1 {
@@ -81,10 +80,14 @@ main .inner {
 .img-box1 > img {
   width: 300px;
   height: 300px;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 .img-box2 > img {
   width: 300px;
   height: 300px;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 .img-box1:hover img {
   opacity: 1;
@@ -172,7 +175,6 @@ iframe {
   width: 600px;
   height: 150px;
   font-size: 1.5rem;
-  margin: 0 auto;
   padding: 1rem;
   border: none;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
