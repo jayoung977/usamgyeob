@@ -196,10 +196,10 @@ iframe {
   line-height: 100px;
 }
 #myform label:hover {
-  text-shadow: 0 0 0 #a00; /* 마우스 호버 */
+  text-shadow: 0 0 0 #ffc701; /* 마우스 호버 */
 }
 #myform label:hover ~ label {
-  text-shadow: 0 0 0 #a00; /* 마우스 호버 뒤에오는 이모지들 */
+  text-shadow: 0 0 0 #ffc701; /* 마우스 호버 뒤에오는 이모지들 */
 }
 #myform fieldset {
   display: inline-block;
@@ -208,7 +208,7 @@ iframe {
   padding: 0px;
 }
 #myform input[type="radio"]:checked ~ label {
-  text-shadow: 0 0 0 #a00; /* 마우스 클릭 체크 */
+  text-shadow: 0 0 0 #ffc701; /* 마우스 클릭 체크 */
 }
 .btn {
   width: 6.5rem;
@@ -250,13 +250,13 @@ iframe {
   line-height: 100px;
 }
 .reviews label:hover {
-  text-shadow: 0 0 0 #a00; /* 마우스 호버 */
+  text-shadow: 0 0 0 #ffc701; /* 마우스 호버 */
 }
 .reviews label:hover ~ label {
-  text-shadow: 0 0 0 #a00; /* 마우스 호버 뒤에오는 이모지들 */
+  text-shadow: 0 0 0 #ffc701; /* 마우스 호버 뒤에오는 이모지들 */
 }
 .reviews input[type="radio"]:checked ~ label {
-  text-shadow: 0 0 0 #a00; /* 마우스 클릭 체크 */
+  text-shadow: 0 0 0 #ffc701; /* 마우스 클릭 체크 */
 }
 .reviews input[type="radio"] {
   display: none; /* 라디오박스 감춤 */
