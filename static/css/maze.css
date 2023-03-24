@@ -99,16 +99,16 @@ ul.maze {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-rows: repeat(15, 1.3rem);
-  grid-template-columns: repeat(15, 1.3rem);
+  grid-template-rows: repeat(15, 1.5rem);
+  grid-template-columns: repeat(15, 1.5rem);
   justify-content: center;
   align-items: center;
   /* gap: 0.1rem; */
 }
 
 ul.maze li {
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   font-weight: bold;
   background-color: #dddddd;
   /* border-radius: 5%; */
@@ -117,8 +117,6 @@ ul.maze li {
   align-items: center;
 }
 ul.maze .row-2.col-2 {
-  width: 1.3rem;
-  height: 1.3rem;
   background-image: url(../img/run.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -126,13 +124,25 @@ ul.maze .row-2.col-2 {
 }
 
 ul.maze .row-14.col-14 {
-  width: 1.3rem;
-  height: 1.3rem;
   background-image: url(../img/exit.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
+ul.maze .row-1.col-1 {
+  border-top-left-radius: 50%;
+}
+ul.maze .row-1.col-15 {
+  border-top-right-radius: 50%;
+}
+ul.maze .row-15.col-1 {
+  border-bottom-left-radius: 50%;
+}
+ul.maze .row-15.col-15 {
+  border-bottom-right-radius: 50%;
+}
+
 button {
   margin-top: 2rem;
   font-size: 1rem;
