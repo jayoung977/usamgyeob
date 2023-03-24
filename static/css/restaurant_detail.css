@@ -1,4 +1,4 @@
-main .inner {
+main.inner {
   position: relative;
   width: 80%;
   /* height: calc(100vh - 5rem); */

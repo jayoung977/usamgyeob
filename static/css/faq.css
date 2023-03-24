@@ -6,13 +6,9 @@ main > h2 {
   /* margin-top: 20px; */
 }
 #Accordion_wrap {
-  /* margin-top: 5%; */
   border: 1px solid #dddddd;
   border-radius: 10px;
 }
-/* .que:first-child {
-  border-top: 1px solid black;
-} */
 
 .que {
   position: relative;
@@ -25,45 +21,26 @@ main > h2 {
   padding-left: 10px;
 }
 
-/* .que::before {
-  padding-left: 10px;
-  display: inline-block;
-  content: "Q";
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #7398c1;
-  margin: 0 5px;
-} */
 .que.on {
-  /* font-weight: bold; */
-  /* color: #006633; */
   background-color: rgb(233, 241, 254);
 }
 .que.on > span {
   font-weight: bold;
-  /* color: #006633; */
-  /* background-color: rgb(233, 241, 254); */
 }
 
 .anw {
   display: none;
   overflow: hidden;
-  font-size: 1.2rem;
-  /* background-color: #f4f4f2; */
+  font-size: 1.1rem;
   padding: 27px 0 27px 30px;
-  /* padding-left: ; */
   border-bottom: 1px solid #dddddd;
 }
-
-/* .anw::before {
-  padding-left: 10px;
-  display: inline-block;
-  content: "A";
-  font-size: 1rem;
-  font-weight: bold;
-  color: #666;
-  margin: 0 5px;
-} */
+.anw b {
+  color: rgb(78, 121, 246);
+}
+.anw1 b:last-child {
+  color: #ef5a68;
+}
 
 .arrow-wrap {
   position: absolute;
