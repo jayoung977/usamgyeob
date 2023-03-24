@@ -150,16 +150,16 @@ function renderMaze() {
       let liElement = document.querySelector(`.row-${y + 1}.col-${x + 1}`);
 
       if ((y === 1 && x === 1) || (y === 13 && x === 13)) {
-        liElement.style.backgroundColor = "red";
+        liElement.style.backgroundColor = "none"; //
         continue;
       }
 
       if (maze[y][x] === 0) {
-        liElement.style.backgroundColor = "#dddddd"; //gray
+        liElement.style.backgroundColor = "#ACB6B3"; //gray
       } else if (maze[y][x] === 2) {
-        liElement.style.backgroundColor = "#FFC701"; //yellow
+        liElement.style.backgroundColor = "#6db32d"; //green
       } else {
-        liElement.style.backgroundColor = "#7398C1"; //blue
+        liElement.style.backgroundColor = "#dddddd"; //gray 연한
       }
     }
   }
@@ -231,7 +231,7 @@ function shortestPath() {
     let parentX = parents[y][x].x;
     y = parentY;
     x = parentX;
-    
+
     points.push(new Pos(y, x));
   }
 
