@@ -150,16 +150,16 @@ function renderMaze() {
       let liElement = document.querySelector(`.row-${y + 1}.col-${x + 1}`);
 
       if ((y === 1 && x === 1) || (y === 13 && x === 13)) {
-        liElement.style.backgroundColor = "none"; //
+        liElement.style.backgroundColor = "red";
         continue;
       }
 
       if (maze[y][x] === 0) {
-        liElement.style.backgroundColor = "#ACB6B3"; //gray
+        liElement.style.backgroundColor = "#dddddd"; //gray
       } else if (maze[y][x] === 2) {
-        liElement.style.backgroundColor = "#6db32d"; //green
+        liElement.style.backgroundColor = "#FFC701"; //yellow
       } else {
-        liElement.style.backgroundColor = "#dddddd"; //gray 연한
+        liElement.style.backgroundColor = "#7398C1"; //blue
       }
     }
   }
@@ -168,14 +168,14 @@ function renderMaze() {
 // BFS 알고리즘
 function BFS() {
   let playerPosition = new Pos(1, 1);
-  let positionY = playerPosition.y; //1
-  let positionX = playerPosition.x; //1
+  let positionY = playerPosition.y;
+  let positionX = playerPosition.x;
 
   let q = new Queue();
 
   // 시작 좌표 발견 및 예약
   found[positionY][positionX] = true; // 발견
-  q.enqueue(new Pos(positionY, positionX)); // 예약 -삽입
+  q.enqueue(new Pos(positionY, positionX)); // 예약
   parents[positionY][positionX] = new Pos(positionY, positionX); // 시작 좌표의 부모는 시작 좌표
 
   while (true) {
@@ -185,7 +185,7 @@ function BFS() {
     }
 
     // 예약 좌표 방문
-    let nowPosition = q.dequeue(); //q 마지막 요소 // q = []
+    let nowPosition = q.dequeue();
     visited[nowPosition.y][nowPosition.x] = true;
 
     // 다음 좌표 후보
@@ -195,26 +195,17 @@ function BFS() {
         nowPosition.x + deltaX[i]
       );
 
-      if (
-        nextPosition.x < 0 ||
-        nextPosition.y < 0 ||
-        nextPosition.x >= 15 ||
-        nextPosition.y >= 15
-      ) {
+      if (maze[nextPosition.y][nextPosition.x] === 0) {
+        continue;
+      }
+      if (found[nextPosition.y][nextPosition.x] === true) {
         continue;
       }
 
-      // console.log(maze);
-
-      if (
-        maze[nextPosition.y][nextPosition.x] === 1 &&
-        found[nextPosition.y][nextPosition.x] === false
-      ) {
-        // 다음 좌표 발견 및 예약
-        found[nextPosition.y][nextPosition.x] = true;
-        q.enqueue(nextPosition); //q에 nextPosition삽입
-        parents[nextPosition.y][nextPosition.x] = nowPosition;
-      }
+      // 다음 좌표 발견 및 예약
+      found[nextPosition.y][nextPosition.x] = true;
+      q.enqueue(nextPosition);
+      parents[nextPosition.y][nextPosition.x] = nowPosition;
     }
   }
 
@@ -222,15 +213,7 @@ function BFS() {
 }
 
 // 최단 경로 함수
-
 function shortestPath() {
-  // for (let row = 0; row < maze.length; row++) {
-  //   for (let col = 0; col < maze[row].length; col++) {
-  //     {
-  //       console.log(row, col, parents[row][col]);
-  //     }
-  //   }
-  // }
   // 도착 좌표
   let y = 13;
   let x = 13;
@@ -240,9 +223,10 @@ function shortestPath() {
   points.push(new Pos(y, x));
 
   while (true) {
-    if (parents[y][x].y === 1 && parents[y][x].x === 1) {
+    if (parents[y][x].y === y && parents[y][x].x === x) {
       break;
     }
+
     y = parents[y][x].y;
     x = parents[y][x].x;
 
@@ -252,11 +236,4 @@ function shortestPath() {
   points.push(new Pos(y, x));
 
   points.reverse();
-  for (let i = 0; i < points.length - 1; i++) {
-    if (points[i].x !== points[i + 1].x && points[i].y !== points[i + 1].y) {
-      xnew = points[i + 1].x;
-      y = points[i].y;
-      points.splice(i + 1, 0, new Pos(y, xnew));
-    }
-  }
 }
