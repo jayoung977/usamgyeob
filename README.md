@@ -56,6 +56,8 @@
 git clone https://github.com/jayoung977/usamgyeob.git
 node app.js
 ```
+- ncp 배포링크: http://27.96.134.230:8000/
+
 ## :shipit: 팀원 소개
 
 |                                                       최자영(조장)                                                       |                                                                         배기호(팀원)                                                                         |                                                       김승윤(팀원)                                                       |                                                       구교민(팀원)                                                       |
