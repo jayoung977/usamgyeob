@@ -48,9 +48,10 @@
 ## :arrows_counterclockwise: 서비스 흐름
 
 ## :white_check_mark:프로젝트 구동 방법
-git clone 
+'''
+git clone https://github.com/jayoung977/usamgyeob.git
 node app.js
-
+'''
 ## :shipit: 팀원 소개
 
 |                                                       최자영(조장)                                                       |                                                                         배기호(팀원)                                                                         |                                                       김승윤(팀원)                                                       |                                                       구교민(팀원)                                                       |
