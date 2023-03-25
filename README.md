@@ -1,6 +1,8 @@
 ## :dart: 우삼겹: 우리동네 맛집 삼겹줄
 <p align='center'>
-<img width='80%' src='http://drive.google.com/uc?export=view&id=1ApkouplJZGta7_J9CYw-dOg6eJ7n_J_5'>
+<img width="948" alt="스크린샷 2023-03-25 10 02 55" src="https://user-images.githubusercontent.com/61008837/227673600-70a5ac8b-8d7d-4507-b36a-108fe140d386.png">
+
+
 </p>
 
 <p align='center'>
