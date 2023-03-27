@@ -28,12 +28,12 @@
 > - 리뷰작성 가능
 
 ## :open_file_folder: 주요 기능
-- 메인 화면 **&rarr; 지역구 polygon 좌표 설정하여 각 자치구 페이지 이동
-- 서비스 소개, FAQ, 고객센터 페이지이동 **&rarr; 동영상 자동 재생 
-- 맛집 확인 기능 **&rarr; 스와이퍼 사용
-- 맛집 상세페이지 **&rarr; 메뉴 이미지 애니메이션 사용 
-- 리뷰, 별점, 공감 기능 **&rarr; json을 이용한 리뷰 저장, 별점 평균 표시
-- 미로찾기 기능 **&rarr; 랜덤 생성 및 BFS알고리즘 사용
+- 메인 화면 **&rarr;** 지역구 polygon 좌표 설정하여 각 자치구 페이지 이동
+- 서비스 소개, FAQ, 고객센터 페이지이동 **&rarr;** 동영상 자동 재생 
+- 맛집 확인 기능 **&rarr;** 스와이퍼 사용
+- 맛집 상세페이지 **&rarr;** 메뉴 이미지 애니메이션 사용 
+- 리뷰, 별점, 공감 기능 **&rarr;** json을 이용한 리뷰 저장, 별점 평균 표시
+- 미로찾기 기능 **&rarr;** 랜덤 생성 및 BFS알고리즘 사용
 
 ## :arrows_counterclockwise: 서비스 흐름
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/61008837/227681564-b11c528d-f9c6-4740-a8e5-d5d68718ee13.png">
