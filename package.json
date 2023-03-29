@@ -5,13 +5,13 @@
     "nodemon": "^2.0.21"
   },
   "name": "usamgyeob",
-  "description": "<p align='center'> <img width='40%' src='https://item.kakaocdn.net/do/df2d96acfd5a739f61945481ec3a18c6ac8e738cb631e72fdb9a96b36413984e'> </p>",
+  "description": "서울시 맛집을 소개하는 사이트입니다. 지도에서 자치구를 클릭해서 맛집을 확인해보세요.",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "usamgyeob",
   "license": "ISC"
 }

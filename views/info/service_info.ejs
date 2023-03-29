@@ -19,7 +19,7 @@
     ></script>
   </head>
   <body>
-    <header>
+    <header id="first-head">
       <div class="brand-logo">
         <div class="brand-name">
           <a href="/">우삼겹</a>
@@ -30,7 +30,7 @@
       </div>
       <div class="page-name">서비스 소개</div>
       <nav>
-        <ul>
+        <ul class="navbar__menu">
           <li class="menu-item">
             <a href="/service_info">서비스 소개</a>
           </li>
@@ -42,12 +42,30 @@
           </li>
         </ul>
       </nav>
+      <a href="#" class="navbar__toggleBtn"><i class="fa-solid fa-bars"></i></a>
     </header>
 
-    <aside id="video-head">
+    <aside class="aside_sidebar">
+      <nav>
+        <ul class="sidebar__menu">
+          <li class="menu-item">
+            <a href="/service_info">서비스 소개</a>
+          </li>
+          <li class="menu-item">
+            <a href="/faq">FAQ</a>
+          </li>
+          <li class="menu-item">
+            <a href="/customer_service">고객센터</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <header id="video-head">
       <h2>우리 동네 <b>Real 맛집</b>을 소개합니다</h2>
       <video src="../static/img/serviceinfo.mp4" autoplay muted></video>
-    </aside>
+    </header>
+
     <main class="inner">
       <div class="cards">
         <div class="card card1">

@@ -150,7 +150,7 @@ function renderMaze() {
       let liElement = document.querySelector(`.row-${y + 1}.col-${x + 1}`);
 
       if ((y === 1 && x === 1) || (y === 13 && x === 13)) {
-        liElement.style.backgroundColor = "none"; //
+        liElement.style.backgroundColor = "none";
         continue;
       }
 

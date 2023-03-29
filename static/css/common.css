@@ -15,7 +15,7 @@ a {
   text-decoration: none;
   color: black;
 }
-header {
+#first-head {
   position: relative;
   width: 100%;
   height: 5rem;
@@ -23,24 +23,24 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-header .brand-logo {
+#first-head .brand-logo {
   margin-left: 20px;
 }
-header .brand-logo:hover {
+#first-head .brand-logo:hover {
   cursor: pointer;
 }
-header .brand-logo .brand-name a {
+#first-head .brand-logo .brand-name a {
   font-weight: 700;
   font-size: 1.5rem;
 }
-header .brand-logo .brand-script a {
+#first-head .brand-logo .brand-script a {
   font-size: 0.9rem;
   white-space: nowrap;
 }
-header .brand-logo .brand-script a b {
+#first-head .brand-logo .brand-script a b {
   color: #fe5b05;
 }
-header .page-name {
+#first-head .page-name {
   font-weight: 700;
   font-size: 2rem;
   text-align: center;
@@ -49,25 +49,76 @@ header .page-name {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-header nav {
+#first-head nav {
   width: 220px;
   font-weight: 700;
   font-size: 1rem;
   margin-right: 20px;
 }
-header > nav > ul {
+#first-head > nav > ul {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
   column-gap: 5px;
 }
 
-main {
-  width: 80%;
-
-  margin: 0 auto;
+#first-head > .navbar__toggleBtn {
+  display: none;
+  margin-right: 20px;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
 }
 
-/* body {
-  background-color: rgb(243, 243, 243);
-} */
+.aside_sidebar {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  #first-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+  }
+  #first-head > nav > .navbar__menu {
+    display: none;
+  }
+  #first-head > .navbar__toggleBtn {
+    display: block;
+  }
+  .aside_sidebar {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    height: 90px;
+  }
+
+  .sidebar__menu {
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: blanchedalmond;
+  }
+  .sidebar__menu li {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .sidebar__menu li:last-child {
+    padding-bottom: 10px;
+  }
+
+  .sidebar__menu.active,
+  .aside_sidebar.active {
+    display: flex;
+  }
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
