@@ -1,6 +1,5 @@
 main > h2 {
   text-align: center;
-  /* margin-top: 20px; */
 }
 
 main > .container {
@@ -8,7 +7,6 @@ main > .container {
   justify-content: space-evenly;
   align-items: center;
   height: 400px;
-  /* background-color: aquamarine; */
 }
 main .box {
   width: 300px;

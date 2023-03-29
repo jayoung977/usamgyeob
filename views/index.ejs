@@ -14,11 +14,12 @@
       src="https://kit.fontawesome.com/986f9d8077.js"
       crossorigin="anonymous"
     ></script>
+    <!-- common.js -->
     <script src="../static/js/common.js" defer></script>
     <script src="../static/js/index.js" defer></script>
   </head>
   <body>
-    <header>
+    <header id="first-head">
       <div class="brand-logo">
         <div class="brand-name">
           <a href="/">우삼겹</a>
@@ -29,7 +30,7 @@
       </div>
       <div class="page-name">서울시 맛집</div>
       <nav>
-        <ul>
+        <ul class="navbar__menu">
           <li class="menu-item">
             <a href="/service_info">서비스 소개</a>
           </li>
@@ -41,7 +42,24 @@
           </li>
         </ul>
       </nav>
+      <a href="#" class="navbar__toggleBtn"><i class="fa-solid fa-bars"></i></a>
     </header>
+
+    <aside class="aside_sidebar">
+      <nav>
+        <ul class="sidebar__menu">
+          <li class="menu-item">
+            <a href="/service_info">서비스 소개</a>
+          </li>
+          <li class="menu-item">
+            <a href="/faq">FAQ</a>
+          </li>
+          <li class="menu-item">
+            <a href="/customer_service">고객센터</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
 
     <main>
       <br />

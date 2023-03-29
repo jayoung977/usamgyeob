@@ -7,14 +7,20 @@
     <title>우삼겹: 우리동네 맛집 삼겹줄</title>
     <!-- favicon -->
     <link rel="icon" href="../static/img/favicon-96x96.png" />
-
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/986f9d8077.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- common.css -->
     <link rel="stylesheet" href="../static/css/common.css" />
     <!-- suggestion.css -->
     <link rel="stylesheet" href="../static/css/suggestion.css" />
+    <!-- common.js -->
+    <script src="../static/js/common.js" defer></script>
   </head>
   <body>
-    <header>
+    <header id="first-head">
       <div class="brand-logo">
         <div class="brand-name">
           <a href="/">우삼겹</a>
@@ -25,7 +31,7 @@
       </div>
       <div class="page-name">맛집 추천</div>
       <nav>
-        <ul>
+        <ul class="navbar__menu">
           <li class="menu-item">
             <a href="/service_info">서비스 소개</a>
           </li>
@@ -37,7 +43,24 @@
           </li>
         </ul>
       </nav>
+      <a href="#" class="navbar__toggleBtn"><i class="fa-solid fa-bars"></i></a>
     </header>
+
+    <aside class="aside_sidebar">
+      <nav>
+        <ul class="sidebar__menu">
+          <li class="menu-item">
+            <a href="/service_info">서비스 소개</a>
+          </li>
+          <li class="menu-item">
+            <a href="/faq">FAQ</a>
+          </li>
+          <li class="menu-item">
+            <a href="/customer_service">고객센터</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
 
     <main class="inner">
       <br />
