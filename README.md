@@ -40,6 +40,12 @@
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/61008837/227681564-b11c528d-f9c6-4740-a8e5-d5d68718ee13.png">
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/61008837/227681579-0b4730a5-43a9-4dfb-babd-50edd64c65fa.png">
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/61008837/227681589-afb888c6-e02d-46ec-85e0-8495d14221e2.png">
+## :arrows_counterclockwise: 시현 영상
+
+
+https://user-images.githubusercontent.com/61008837/236637691-0bea1299-eb87-4318-8810-1b39b996f2c3.mp4
+
+
 
 ## :white_check_mark:프로젝트 구동 방법 
 ```
