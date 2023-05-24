@@ -1,16 +1,20 @@
 ## :dart: 우삼겹: 우리동네 맛집 삼겹줄
-<p align='center'>
-<img width="600" alt="스크린샷 2023-03-25 10 02 55" src="https://user-images.githubusercontent.com/61008837/227673600-70a5ac8b-8d7d-4507-b36a-108fe140d386.png">
+
+<!-- <p align='center'> -->
+   <!-- <img width="600" alt="스크린샷 2023-03-25 10 02 55" src="https://user-images.githubusercontent.com/61008837/227673600-70a5ac8b-8d7d-4507-b36a-108fe140d386.png"> -->
+<!-- </p> -->
+
+![ezgif com-gif-maker](https://github.com/jayoung977/usamgyeob/assets/61008837/d3268a96-be18-459b-858c-b9b2271edc5e)
 
 
-</p>
 
+<!-- 
 <p align='center'>
     <img src="https://img.shields.io/badge/EJS-962300?style=flat-square&logo=ejs&logoColor=white"/>
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
  
-</p>
+</p> -->
 
 ## :mag_right: 기획 배경
 - 자치구별로 한눈에 맛집을 확인
@@ -41,13 +45,6 @@
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/61008837/227681579-0b4730a5-43a9-4dfb-babd-50edd64c65fa.png">
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/61008837/227681589-afb888c6-e02d-46ec-85e0-8495d14221e2.png">
 
-## :arrows_counterclockwise: 시현 영상
-
-
-<p align='center' width="800">https://user-images.githubusercontent.com/61008837/236637691-0bea1299-eb87-4318-8810-1b39b996f2c3.mp4</p>
-
-<br/>
-
 ## :white_check_mark:프로젝트 구동 방법 
 ```
 git clone https://github.com/jayoung977/usamgyeob.git
@@ -61,6 +58,10 @@ node app.js
 - 미로 찾기에서 **대각선으로 길찾기되는 문제**가 발생하여 </br> **&rarr; 좌표 넣는 지점을 수정해 해결하였습니다.**
 - 리뷰작성시 **리뷰내용이 저장되지 않는 문제**가 발생하여 </br> **&rarr; 경로 수정 및 변수 지정을 통해 해결했습니다.**
 - 리뷰작성시 **리뷰 혹은 별점이 추가되지 않는 경우** 리뷰가 저장되지 않고 </br> **&rarr; 경고창을 띄우도록 하여 평균평점에 오류가 생기지 않도록 하였습니다.** 
+
+## :sparkles: 팀프로젝트 최우수상 수상
+
+[[KDT_WEB6_상장]_1차_팀프로젝트_최우수상_3조.pdf](https://github.com/jayoung977/usamgyeob/files/11553703/KDT_WEB6_._1._._._3.pdf)
 
 
 ## :shipit: 팀원 소개
