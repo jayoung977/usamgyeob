@@ -53,7 +53,7 @@
 git clone https://github.com/jayoung977/usamgyeob.git
 node app.js
 ```
-- ncp 배포링크: http://27.96.134.230:8000/
+- aws 배포링크: http://3.106.52.247:8000/
 
 ## :speech_balloon: 기술 및 논의 정리
 - 스와이퍼 기능에서 슬라이드 수에 따른 **사진 늘림현상**이 발생 </br>**&rarr; 스와이퍼 기본 속성(slidesPerView 2배이상)을 확인하여 문제를 해결했습니다.**
