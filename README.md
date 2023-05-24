@@ -61,7 +61,8 @@ node app.js
 
 ## :sparkles: 팀프로젝트 최우수상 수상
 
-[[KDT_WEB6_상장]_1차_팀프로젝트_최우수상_3조.pdf](https://github.com/jayoung977/usamgyeob/files/11553703/KDT_WEB6_._1._._._3.pdf)
+<!-- [[ 포스코X코딩온 1차_팀프로젝트_최우수상_3조.pdf](https://github.com/jayoung977/usamgyeob/files/11553703/KDT_WEB6_._1._._._3.pdf)]() -->
+[포스코X코딩온 1차_팀프로젝트_최우수상_3조.pdf](https://drive.google.com/uc?id=19YYX45Rw0KPuK3qWa2BcNW10MimtfeXj)
 
 
 ## :shipit: 팀원 소개
